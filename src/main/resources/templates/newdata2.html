@@ -1,0 +1,2521 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+
+
+        <style>
+            p{
+              font-size: 350%;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              text-align: center;
+              margin-top: 4vh;
+              
+            }
+      
+            .container {
+                display: flex;
+                background-color:rgb(198, 255, 255);
+                box-shadow: 10px 5px 5px lightgrey; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: -30%;
+                margin-right: 30%;
+                width:140vh;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 50px 0;
+                border-radius: 10px;
+                
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-bottom: 6%;
+                margin-top: 6%;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 3vh;
+            }
+
+            .button {
+                background-color: rgb(198, 255, 255); 
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 20px 20px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(198, 255, 255); 
+                color: black; 
+                border: 2px solid #008997;
+                height: 6%;
+                width: 80%;
+            }
+
+            .button:hover {
+                background-color: #008997;
+                color: white;
+            }
+
+            .button:active {
+                background-color: #0367a6;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '»';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .text {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+    
+            .rows{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%;
+                margin-left: 15%;
+                margin-right: 15%;
+                align-items: center;
+                gap: 1vh;
+                
+            }
+            .question {
+                position: relative;
+                font-weight: bold;
+                font-size: 140%;
+                margin-left: 15%;
+                word-wrap: break-word; /* 允许在单词内部换行 */
+                overflow-wrap: break-word; /* 与 word-wrap 作用相同，是较新的属性名 */
+            }
+            .option{
+                font-size-adjust: 1;
+                font-weight: bold;
+                font-size: 2vh;
+                flex-grow: 1;
+                
+            }
+            .back_button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+      
+          </style>
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function openPage(x) {
+              window.open(x, "_self");
+        }
+
+        function opendivs(x) {
+          var div = document.getElementById(x);
+          if (div.style.display === "none") {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+            </div>
+        </div>
+        <div class="container2">
+            <button class="button" onclick="opendivs(1)">一、大气腐蚀</button>
+            <form id=1 style="display: none">
+                <div class="container">
+                    <label class="question">1.1.管道铺设类型</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-1-1" value=10> 
+                        <label class="option">埋地段</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-1-1" value="none"> 
+                        <label class="option">跨越段</label>
+                    </div>
+                </div>
+                <div id="fsdf-1-1-2"  style="display: none;">
+        
+                    <div class="container">
+                        <label class="question">1.1.1.跨越段的位置特点</label>
+                        <div class="rows" >
+                            <input type="radio" name="fsdf-1-1-1" value=0> 
+                            <label class="option">位于水与空气的界面</label>
+            
+                            <input type="radio" name="fsdf-1-1-1" value=1> 
+                            <label class="option">位于土壤与空气界面</label>
+            
+                            <input type="radio" name="fsdf-1-1-1" value=2> 
+                            <label class="option">位于空气中</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">1.1.2.跨越段的结构特点</label>
+                        <div class="rows" >
+                            <input type="radio" name="fsdf-1-1-2" value=0> 
+                            <label class="option">加装套管</label>
+            
+                            <input type="radio" name="fsdf-1-1-2" value=0.5> 
+                            <label class="option">存在支撑或吊架</label>
+            
+                            <input type="radio" name="fsdf-1-1-2" value=1> 
+                            <label class="option">无上述情况</label>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <label class="question">1.1.3.大气腐蚀性</label>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=0> 
+                            <label class="option">未进行大气腐蚀性调查</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=0> 
+                            <label class="option">是海洋气候，并且含化学品</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=1> 
+                            <label class="option">是工业大气或一般大气，含化学品，并且湿度高</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=1.5> 
+                            <label class="option">是海洋气候并且不含化学品</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=2> 
+                            <label class="option">是工业大气或一般大气，不含化学品，并且湿度高、温度高</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=2.5> 
+                            <label class="option">是工业大气或一般大气，含化学品，并且湿度低</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-3" value=3> 
+                            <label class="option">是工业大气或一般大气，不含化学品，并且湿度低、温度低</label>
+                        </div>
+                        
+                    </div>
+                    <div class="container">
+                        <label class="question">1.1.4.大气腐蚀防腐层的适用性</label>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-4" value=0 id="fsdf-1-1-4"> 
+                            <label class="option">无大气腐蚀防腐层</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-4" value=0> 
+                            <label class="option">大气腐蚀防腐层不适合管道区段所处环境</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-4" value=0.5> 
+                            <label class="option">大气腐蚀防腐层不是专门为管道区段所处环境设计的</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-4" value=1 > 
+                            <label class="option">大气腐蚀防腐层是适应管道区段所处环境的防腐层</label>
+                        </div>
+                        
+                    </div>
+                    <div class="container">
+        
+                        <label class="question">1.1.5.大气腐蚀防腐层的施工质量</label>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-5" value=0 id="fsdf-1-1-5"> 
+                            <label class="option">无大气腐蚀防腐层</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-5" value=0> 
+                            <label class="option">施工步骤疏漏，没有进行环境控制</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-5" value=0.5> 
+                            <label class="option">施工步骤齐全，但操作不规范</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-5" value=0.8> 
+                            <label class="option">施工步骤齐全，操作较规范，但没有正规的质量控制程序</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-5" value=1 > 
+                            <label class="option">有详细的规范说明，采用适当的质量控制系统</label>
+                        </div>
+                        
+                    </div>
+                    <div class="container">
+        
+                        <label class="question">1.1.6.大气腐蚀防腐层的日常检查</label>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-6" value=0 id="fsdf-1-1-6"> 
+                            <label class="option">无大气腐蚀防腐层</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-6" value=0> 
+                            <label class="option">施工步骤疏漏，没有进行环境控制</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-6" value=0.5> 
+                            <label class="option">施工步骤齐全，但操作不规范</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-6" value=0.8> 
+                            <label class="option">施工步骤齐全，操作较规范，但没有正规的质量控制程序</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-6" value=1> 
+                            <label class="option">有详细的规范说明，采用适当的质量控制系统</label>
+                        </div>
+                        
+                    </div>
+                    <div class="container">
+        
+                        <label class="question">1.1.7.大气腐蚀防腐层的修补更换</label>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-7" value=0 id="fsdf-1-1-7"> 
+                            <label class="option">无大气腐蚀防腐层</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-7" value=0> 
+                            <label class="option">不修补、更换损坏的大气腐蚀防腐层</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-7" value=0.5> 
+                            <label class="option">不坚持报告和修复缺陷</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-7" value=0.8> 
+                            <label class="option">不正式报告缺陷，仅在方便的时候才进行修复</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="fsdf-1-1-7" value=1> 
+                            <label class="option">立即报告缺陷，并有文件记录安排修复时间，按照时间安排和规范进行修复</label>
+                        </div>
+                        <script>
+                            const noCorrosionLayerRadio = document.getElementById('fsdf-1-1-4');
+                            const radio1 = document.getElementById('fsdf-1-1-5');
+                            const radio2 = document.getElementById('fsdf-1-1-6');
+                            const radio3 = document.getElementById('fsdf-1-1-7');
+                    
+                            noCorrosionLayerRadio.addEventListener('change', function() {
+                            if (noCorrosionLayerRadio.checked) {
+                                radio1.checked = true;
+                                radio2.checked = true;
+                                radio3.checked = true;
+                            }
+                            });
+                        </script>  
+                    </div>     
+                </div>
+                <script>
+                    var dsfph_ms_1_1Radios = document.getElementsByName("fsdf-1-1");
+                    var dsfph_ms_1_2Radios = document.querySelectorAll("#fsdf-1-1-2 input[type='radio']");
+        
+                    for (var i = 0; i < dsfph_ms_1_1Radios.length; i++) {
+                        dsfph_ms_1_1Radios[i].addEventListener("click", function() {
+                            if (this.value === "none") {
+                                document.getElementById("fsdf-1-1-2").style.display = "block";
+                            } else {
+                                document.getElementById("fsdf-1-1-2").style.display = "none";
+                                for (var j = 0; j < dsfph_ms_1_2Radios.length; j++) {
+                                    dsfph_ms_1_2Radios[j].checked = false;
+                                }
+                            }
+                        });
+                    }
+                </script>
+                
+            </form>
+        
+            <button class="button" onclick="opendivs(2)">二、内腐蚀</button>
+            <form id=2 style="display: none">
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.1.输气管道</label>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.1.1.含水量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-1" value=0> 
+                        <label class="option">有凝析水</label>
+        
+                        <input type="radio" name="fsdf-2-1-1" value=0> 
+                        <label class="option">运行过程中有可能产生凝析水</label>
+        
+                        <input type="radio" name="fsdf-2-1-1" value=3> 
+                        <label class="option">无凝析水</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.1.2.二氧化碳分压</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-2" value=0> 
+                        <label class="option">＞0．21 MPa</label>
+        
+                        <input type="radio" name="fsdf-2-1-2" value=1> 
+                        <label class="option">[0．021 MPa，0．21 MPa]</label>
+        
+                        <input type="radio" name="fsdf-2-1-2" value=2> 
+                        <label class="option">＜0．021 MPa</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.1.3.硫化氢含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-3" value=0> 
+                        <label class="option">硫化氢含量＞20 mg／m³</label>
+        
+                        <input type="radio" name="fsdf-2-1-3" value=2> 
+                        <label class="option">硫化氢含量≤20 mg／m³</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.1.4.介质流速</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-4" value=0> 
+                        <label class="option">介质流速＜3 m／s</label>
+        
+                        <input type="radio" name="fsdf-2-1-4" value=1> 
+                        <label class="option">介质流速≥3 m／s</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.1.5.内防腐措施</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-5" value=0> 
+                        <label class="option">无内防腐措施</label>
+        
+                        <input type="radio" name="fsdf-2-1-5" value=0.5> 
+                        <label class="option">采用内腐蚀监测</label>
+        
+                        <input type="radio" name="fsdf-2-1-5" value=1> 
+                        <label class="option">定期清管</label>
+        
+                        <input type="radio" name="fsdf-2-1-5" value=1.5> 
+                        <label class="option">注入缓蚀剂</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-5" value=2> 
+                        <label class="option">采用防腐内覆盖层</label>
+        
+                        <input type="radio" name="fsdf-2-1-5" value=3> 
+                        <label class="option">采用上述两种或两种以上的措施</label>
+        
+                        <input type="radio" name="fsdf-2-1-5" value=3> 
+                        <label class="option">不需要采取措施</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.6.内检测周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-6" value=0 id="fsdf-2-1-6-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-1-6" value=0> 
+                        <label class="option">内检测周期＞8年</label>
+        
+                        <input type="radio" name="fsdf-2-1-6" value=1> 
+                        <label class="option">内检测周期∈(5年，8年]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-6" value=1.5> 
+                        <label class="option">内检测周期∈[3年，5年]</label>
+        
+                        <input type="radio" name="fsdf-2-1-6" value=2> 
+                        <label class="option">内检测周期＜3年</label>
+        
+                        <input type="radio" name="fsdf-2-1-6" value=2 id="fsdf-2-1-6-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.7.内检测结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-7" value=0 id="fsdf-2-1-7-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-1-7" value=0> 
+                        <label class="option">发现的腐蚀缺陷数量≥5</label>
+        
+                        <input type="radio" name="fsdf-2-1-7" value=1> 
+                        <label class="option">发现的腐蚀缺陷数量∈[1，5)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-1-7" value=2> 
+                        <label class="option">未发现腐蚀缺陷</label>
+        
+                        <input type="radio" name="fsdf-2-1-7" value=2 id="fsdf-2-1-7-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <script>
+                    const  wjxnjc= document.getElementById('fsdf-2-1-6-1');
+                    const  wjxnjc_2 = document.getElementById('fsdf-2-1-7-1');
+            
+                    wjxnjc.addEventListener('change', function() {
+                    if (wjxnjc.checked) {
+                        wjxnjc_2.checked = true;
+                    }
+                    });
+        
+                    const  bxynjc= document.getElementById('fsdf-2-1-6-2');
+                    const  bxynjc_2 = document.getElementById('fsdf-2-1-7-2');
+            
+                    bxynjc.addEventListener('change', function() {
+                    if (bxynjc.checked) {
+                        bxynjc_2.checked = true;
+                    }
+                    });
+                </script>  
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.2.集气管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.1.含水量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-1" value=0> 
+                        <label class="option">含游离水</label>
+        
+                        <input type="radio" name="fsdf-2-2-1" value=6> 
+                        <label class="option">不含游离水</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.2.2.氯离子含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-2" value=0> 
+                        <label class="option">>60000 mg/L</label>
+        
+                        <input type="radio" name="fsdf-2-2-2" value=1> 
+                        <label class="option">[10000 mg/L,60000 mg/L]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-2" value=3> 
+                        <label class="option">[1000 mg/L,10000 mg/L)</label>
+        
+                        <input type="radio" name="fsdf-2-2-2" value=4> 
+                        <label class="option"><1000 mg/L</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.2.3.PH值</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-3" value=0> 
+                        <label class="option">pH≤3.5</label>
+                        <input type="radio" name="fsdf-2-2-3" value=2> 
+                        <label class="option">pH值∈(3.5,6.5]</label>
+                        <input type="radio" name="fsdf-2-2-3" value=4> 
+                        <label class="option">pH>6.5</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.2.4.二氧化碳含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-4" value=0> 
+                        <label class="option">二氧化碳分压>0.21 MPa</label>
+                    </div>
+        
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-4" value=2> 
+                        <label class="option">二氧化碳分压∈[0.021 MPa,0.21 MPa]</label>
+                    </div>
+        
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-4" value=4> 
+                        <label class="option">二氧化碳分压<0.021 MPa</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.2.5.硫化氢含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-5" value=0> 
+                        <label class="option">硫化氢分压>1 MPa</label>
+        
+                        <input type="radio" name="fsdf-2-2-5" value=1> 
+                        <label class="option">硫化氢分压∈[0.1 MPa,1 MPa]</label>
+        
+                        <input type="radio" name="fsdf-2-2-5" value=2> 
+                        <label class="option">硫化氢分压∈[0.01 MPa,0.1 MPa)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-5" value=3> 
+                        <label class="option">硫化氢分压∈[0.0003 MPa,0.01 MPa)</label>
+        
+                        <input type="radio" name="fsdf-2-2-5" value=4> 
+                        <label class="option">硫化氢分压<0.0003 MPa </label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.6.介质温度</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-6" value=0> 
+                        <label class="option">介质温度<60℃ 或 >l00℃</label>
+        
+                        <input type="radio" name="fsdf-2-2-6" value=2> 
+                        <label class="option">介质温度∈[60℃,100℃]</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.7.介质流速</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-7" value=0> 
+                        <label class="option">介质流速<3 m/s </label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-7" value=0> 
+                        <label class="option">介质流速＞影响缓蚀剂膜稳定性的流速</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-7" value=2> 
+                        <label class="option">介质流速∈[3 m/s,影响缓蚀剂膜稳定性的流速]</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.8.防腐措施</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-8" value=0> 
+                        <label class="option">无内防腐措施</label>
+        
+                        <input type="radio" name="fsdf-2-2-8" value=2> 
+                        <label class="option">采用内腐蚀监测</label>
+        
+                        <input type="radio" name="fsdf-2-2-8" value=4> 
+                        <label class="option">定期清管</label>
+        
+                        <input type="radio" name="fsdf-2-2-8" value=6> 
+                        <label class="option">注入缓蚀剂</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-8" value=8> 
+                        <label class="option">采用防腐内覆盖层</label>
+        
+                        <input type="radio" name="fsdf-2-2-8" value=10> 
+                        <label class="option">采用上述两种或两种以上的措施</label>
+        
+                        <input type="radio" name="fsdf-2-2-8" value=10> 
+                        <label class="option">不需要采取措施</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.9.内检测周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-9" value=0 id="fsdf-2-2-9-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-2-9" value=0> 
+                        <label class="option">内检测周期＞5年</label>
+        
+                        <input type="radio" name="fsdf-2-2-9" value=2> 
+                        <label class="option">内检测周期∈(3年，5年]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-9" value=4> 
+                        <label class="option">内检测周期∈[2年，3年]</label>
+        
+                        <input type="radio" name="fsdf-2-2-9" value=6> 
+                        <label class="option">内检测周期＜2年</label>
+        
+                        <input type="radio" name="fsdf-2-2-9" value=6 id="fsdf-2-2-9-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.10.内检测结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-10" value=0 id="fsdf-2-2-10-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-2-10" value=0> 
+                        <label class="option">发现的腐蚀缺陷数量≥5</label>
+        
+                        <input type="radio" name="fsdf-2-2-10" value=4> 
+                        <label class="option">发现的腐蚀缺陷数量∈[1，5)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-2-10" value=8> 
+                        <label class="option">未发现腐蚀缺陷</label>
+        
+                        <input type="radio" name="fsdf-2-2-10" value=8 id="fsdf-2-2-10-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <script>
+                    const  wjxnjc2= document.getElementById('fsdf-2-2-9-1');
+                    const  wjxnjc2_2 = document.getElementById('fsdf-2-2-10-1');
+            
+                    wjxnjc2.addEventListener('change', function() {
+                    if (wjxnjc2.checked) {
+                        wjxnjc2_2.checked = true;
+                    }
+                    });
+        
+                    const  bxynjc2= document.getElementById('fsdf-2-2-9-2');
+                    const  bxynjc2_2 = document.getElementById('fsdf-2-2-10-2');
+            
+                    bxynjc2.addEventListener('change', function() {
+                    if (bxynjc2.checked) {
+                        bxynjc2_2.checked = true;
+                    }
+                    });
+                </script> 
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.3.输油管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.3.1.含水量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-1" value=0> 
+                        <label class="option">有凝析水</label>
+        
+                        <input type="radio" name="fsdf-2-3-1" value=0> 
+                        <label class="option">运行过程中有可能产生凝析水</label>
+        
+                        <input type="radio" name="fsdf-2-3-1" value=3> 
+                        <label class="option">无凝析水</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.2.二氧化碳分压</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-2" value=0> 
+                        <label class="option">＞0．21 MPa</label>
+        
+                        <input type="radio" name="fsdf-2-3-2" value=0.5> 
+                        <label class="option">[0．021 MPa，0．21 MPa]</label>
+        
+                        <input type="radio" name="fsdf-2-3-2" value=1> 
+                        <label class="option">＜0．021 MPa</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.3.硫化氢含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-3" value=0> 
+                        <label class="option">硫化氢含量＞20 mg／m³</label>
+        
+                        <input type="radio" name="fsdf-2-3-3" value=1> 
+                        <label class="option">硫化氢含量≤20 mg／m³</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.4.蜡含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-4" value=0> 
+                        <label class="option">蜡含量中等</label>
+        
+                        <input type="radio" name="fsdf-2-3-4" value=0.5> 
+                        <label class="option">蜡含量低</label>
+        
+                        <input type="radio" name="fsdf-2-3-4" value=1> 
+                        <label class="option">蜡含量高</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.5.介质温度</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-5" value=0> 
+                        <label class="option">介质温度较高</label>
+        
+                        <input type="radio" name="fsdf-2-3-5" value=0.5> 
+                        <label class="option">介质温度中等</label>
+        
+                        <input type="radio" name="fsdf-2-3-5" value=1> 
+                        <label class="option">介质温度低</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.6.介质流速</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-6" value=0> 
+                        <label class="option">介质流速＜3 m／s</label>
+        
+                        <input type="radio" name="fsdf-2-3-6" value=1> 
+                        <label class="option">介质流速≥3 m／s</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.3.7.内防腐措施</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-7" value=0> 
+                        <label class="option">无内防腐措施</label>
+        
+                        <input type="radio" name="fsdf-2-3-7" value=0.5> 
+                        <label class="option">采用内腐蚀监测</label>
+        
+                        <input type="radio" name="fsdf-2-3-7" value=1> 
+                        <label class="option">定期清管</label>
+        
+                        <input type="radio" name="fsdf-2-3-7" value=1.5> 
+                        <label class="option">注入缓蚀剂</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-7" value=2> 
+                        <label class="option">采用防腐内覆盖层</label>
+        
+                        <input type="radio" name="fsdf-2-3-7" value=3> 
+                        <label class="option">采用上述两种或两种以上的措施</label>
+        
+                        <input type="radio" name="fsdf-2-3-7" value=3> 
+                        <label class="option">不需要采取措施</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.3.8.内检测周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-8" value=0 id="fsdf-2-3-8-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-3-8" value=0> 
+                        <label class="option">内检测周期＞8年</label>
+        
+                        <input type="radio" name="fsdf-2-3-8" value=1> 
+                        <label class="option">内检测周期∈(5年，8年]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-8" value=1.5> 
+                        <label class="option">内检测周期∈[3年，5年]</label>
+        
+                        <input type="radio" name="fsdf-2-3-8" value=2> 
+                        <label class="option">内检测周期＜3年</label>
+        
+                        <input type="radio" name="fsdf-2-3-8" value=2 id="fsdf-2-3-8-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.3.9.内检测结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-9" value=0 id="fsdf-2-3-9-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-3-9" value=0> 
+                        <label class="option">发现的腐蚀缺陷数量≥5</label>
+        
+                        <input type="radio" name="fsdf-2-3-9" value=1> 
+                        <label class="option">发现的腐蚀缺陷数量∈[1，5)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-3-9" value=2> 
+                        <label class="option">未发现腐蚀缺陷</label>
+        
+                        <input type="radio" name="fsdf-2-3-9" value=2 id="fsdf-2-3-9-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <script>
+                    const  wjxnjc3= document.getElementById('fsdf-2-3-8-1');
+                    const  wjxnjc3_2 = document.getElementById('fsdf-2-3-9-1');
+            
+                    wjxnjc3.addEventListener('change', function() {
+                    if (wjxnjc3.checked) {
+                        wjxnjc3_2.checked = true;
+                    }
+                    });
+        
+                    const  bxynjc3= document.getElementById('fsdf-2-3-8-2');
+                    const  bxynjc3_2 = document.getElementById('fsdf-2-3-9-2');
+            
+                    bxynjc3.addEventListener('change', function() {
+                    if (bxynjc3.checked) {
+                        bxynjc3_2.checked = true;
+                    }
+                    });
+                </script>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question" >2.4.集油管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.1.含水量(包括冷凝水)</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-1" value=0> 
+                        <label class="option">含游离水</label>
+        
+                        <input type="radio" name="fsdf-2-4-1" value=8> 
+                        <label class="option">不含游离水</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.4.2.氯离子含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-2" value=0> 
+                        <label class="option">＞60000 mg／L</label>
+        
+                        <input type="radio" name="fsdf-2-4-2" value=1> 
+                        <label class="option">[10000 mg／L，60000 mg／L]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-2" value=2> 
+                        <label class="option">[1000 mg／L，10000 mg／L)</label>
+        
+                        <input type="radio" name="fsdf-2-4-2" value=3> 
+                        <label class="option">＜l000 mg／L</label>
+                    </div>
+                </div> 
+                
+                <div class="container">
+                    <label class="question">2.4.3.PH值</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-3" value=0> 
+                        <label class="option">pH≤3.5</label>
+                        <input type="radio" name="fsdf-2-4-3" value=1.5> 
+                        <label class="option">pH值∈(3.5,6.5]</label>
+                        <input type="radio" name="fsdf-2-4-3" value=3> 
+                        <label class="option">pH>6.5</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.4.4.二氧化碳分压</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-4" value=0> 
+                        <label class="option">＞0．21 MPa</label>
+        
+                        <input type="radio" name="fsdf-2-4-4" value=1.5> 
+                        <label class="option">[0．021 MPa，0．21 MPa]</label>
+        
+                        <input type="radio" name="fsdf-2-4-4" value=3> 
+                        <label class="option">＜0．021 MPa</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.5.硫化氢含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-5" value=0> 
+                        <label class="option">硫化氢分压>1 MPa</label>
+        
+                        <input type="radio" name="fsdf-2-4-5" value=1> 
+                        <label class="option">硫化氢分压∈[0.1 MPa,1 MPa]</label>
+        
+                        <input type="radio" name="fsdf-2-4-5" value=1> 
+                        <label class="option">硫化氢分压∈[0.01 MPa,0.1 MPa)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-5" value=2> 
+                        <label class="option">硫化氢分压∈[0.0003 MPa,0.01 MPa)</label>
+        
+                        <input type="radio" name="fsdf-2-4-5" value=3> 
+                        <label class="option">硫化氢分压<0.0003 MPa </label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.6.蜡含量</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-6" value=0> 
+                        <label class="option">蜡含量中等</label>
+        
+                        <input type="radio" name="fsdf-2-4-6" value=1> 
+                        <label class="option">蜡含量低</label>
+        
+                        <input type="radio" name="fsdf-2-4-6" value=2> 
+                        <label class="option">蜡含量高</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.4.7.介质温度</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-7" value=0> 
+                        <label class="option">介质温度较高</label>
+        
+                        <input type="radio" name="fsdf-2-4-7" value=1> 
+                        <label class="option">介质温度中等</label>
+        
+                        <input type="radio" name="fsdf-2-4-7" value=2> 
+                        <label class="option">介质温度低</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.4.8.介质流速</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-8" value=0> 
+                        <label class="option">介质流速＜3 m／s</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-8" value=0> 
+                        <label class="option">介质流速＞影响缓蚀剂膜稳定性的流速</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-8" value=2> 
+                        <label class="option">介质流速∈[3 m／s，影响缓蚀剂膜稳定性的流速]</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">2.4.9.内防腐措施</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-9" value=0> 
+                        <label class="option">无内防腐措施</label>
+        
+                        <input type="radio" name="fsdf-2-4-9" value=2> 
+                        <label class="option">采用内腐蚀监测</label>
+        
+                        <input type="radio" name="fsdf-2-4-9" value=4> 
+                        <label class="option">定期清管</label>
+        
+                        <input type="radio" name="fsdf-2-4-9" value=6> 
+                        <label class="option">注入缓蚀剂</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-9" value=8> 
+                        <label class="option">采用防腐内覆盖层</label>
+        
+                        <input type="radio" name="fsdf-2-4-9" value=10> 
+                        <label class="option">采用上述两种或两种以上的措施</label>
+        
+                        <input type="radio" name="fsdf-2-4-9" value=10> 
+                        <label class="option">不需要采取措施</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.10.内检测周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-10" value=0 id="fsdf-2-4-10-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-4-10" value=0> 
+                        <label class="option">内检测周期＞5年</label>
+        
+                        <input type="radio" name="fsdf-2-4-10" value=2> 
+                        <label class="option">内检测周期∈(3年，5年]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-10" value=4> 
+                        <label class="option">内检测周期∈[2年，3年]</label>
+        
+                        <input type="radio" name="fsdf-2-4-10" value=6> 
+                        <label class="option">内检测周期＜2年</label>
+        
+                        <input type="radio" name="fsdf-2-4-10" value=6 id="fsdf-2-4-10-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.11.内检测结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-11" value=0 id="fsdf-2-4-11-1"> 
+                        <label class="option">未进行内检测</label>
+        
+                        <input type="radio" name="fsdf-2-4-11" value=0> 
+                        <label class="option">发现的腐蚀缺陷数量≥5</label>
+        
+                        <input type="radio" name="fsdf-2-4-11" value=4> 
+                        <label class="option">发现的腐蚀缺陷数量∈[1，5)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-2-4-11" value=8> 
+                        <label class="option">未发现腐蚀缺陷</label>
+        
+                        <input type="radio" name="fsdf-2-4-11" value=8 id="fsdf-2-4-11-2"> 
+                        <label class="option">不需要进行内检测</label>
+                    </div>
+                </div>
+        
+                <script>
+                    const  wjxnjc4= document.getElementById('fsdf-2-4-10-1');
+                    const  wjxnjc4_2 = document.getElementById('fsdf-2-4-11-1');
+            
+                    wjxnjc4.addEventListener('change', function() {
+                    if (wjxnjc4.checked) {
+                        wjxnjc4_2.checked = true;
+                    }
+                    });
+        
+                    const  bxynjc4= document.getElementById('fsdf-2-4-10-2');
+                    const  bxynjc4_2 = document.getElementById('fsdf-2-4-11-2');
+            
+                    bxynjc4.addEventListener('change', function() {
+                    if (bxynjc4.checked) {
+                        bxynjc4_2.checked = true;
+                    }
+                    });
+                </script>
+            </form>
+        
+            <button class="button" onclick="opendivs(3)">三、土壤腐蚀</button>
+            <form id=3 style="display: none">
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question" >3.1.输气管道和输油管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.1.土壤电阻率</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-1" value=0> 
+                        <label class="option">未进行土壤电阻率测量</label>
+        
+                        <input type="radio" name="fsdf-3-1-1" value=0> 
+                        <label class="option">土壤电阻率＜20 Ω·m</label>
+                    </div>
+                    <div class="rows">
+        
+                        <input type="radio" name="fsdf-3-1-1" value=3> 
+                        <label class="option">土壤电阻率∈[20 Ω·m，50 Ω·m]</label>
+        
+        
+                        <input type="radio" name="fsdf-3-1-1" value=6> 
+                        <label class="option">土壤电阻率＞50 Ω·m</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">3.1.2.直流杂散电流干扰其排流措施</label>    
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=0> 
+                        <label class="option">直流杂散电流干扰程度大，并且未设置排流装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=1> 
+                        <label class="option">直流杂散电流干扰程度大，并且设置的排流装置不能完全满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=1> 
+                        <label class="option">直流杂散电流干扰程度中或小，并且未设置排流装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=2> 
+                        <label class="option">直流杂散电流干扰程度中或小，并且设置的排流装置不能完全满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=4> 
+                        <label class="option">设置的排流装置能满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-2" value=4> 
+                        <label class="option">不存在直流杂散电流干扰</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">3.1.3.交流杂散电流干扰</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-3" value=0> 
+                        <label class="option">存在交流杂散电流干扰</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-3" value=2> 
+                        <label class="option">不存在交流杂散电流干扰</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.4.防腐设计单位的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-4" value=0> 
+                        <label class="option">防腐设计单位不具备相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-4" value=1> 
+                        <label class="option">防腐设计单位具备相应资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.5.防腐设计标准规范的选用</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-5" value=0> 
+                        <label class="option">管道防腐设计未按标准规范设计或采用当时已经作废的设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-5" value=1> 
+                        <label class="option">管道防腐设计采用当时有效的旧版本管道设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-5" value=2> 
+                        <label class="option">管道防腐设计采用现行标准规范</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.6.防腐设计的适用性</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-6" value=0> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计不符合防腐设计标准规范要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-6" value=3> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计基本符合防腐设计标准规范要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-6" value=5> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计符合防腐设计标准规范要求</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.7.外防腐层类型</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-7" value=0> 
+                        <label class="option">无外防腐层</label>
+        
+                        <input type="radio" name="fsdf-3-1-7" value=1> 
+                        <label class="option">是防锈油漆</label>
+        
+                        <input type="radio" name="fsdf-3-1-7" value=1.5> 
+                        <label class="option">是高密度聚乙烯</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-7" value=2> 
+                        <label class="option">是沥青加玻璃布</label>
+        
+                        <input type="radio" name="fsdf-3-1-7" value=3> 
+                        <label class="option">是三层PE复合涂层</label>
+        
+                        <input type="radio" name="fsdf-3-1-7" value=3> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-7" value=2.5> 
+                        <label class="option">是煤焦油瓷漆或环氧煤沥青</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">3.1.8.外防腐层质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-8" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-8" value=0> 
+                        <label class="option">外防腐层无质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-8" value=1> 
+                        <label class="option">外防腐层质量证明文件齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-8" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.9.外防腐层复验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=0> 
+                        <label class="option">未进行外防腐层复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=0> 
+                        <label class="option">外防腐层复验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=3> 
+                        <label class="option">外防腐层复验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=3> 
+                        <label class="option">不需要进行外防腐层复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-9" value=3> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.10.外防腐层补口补伤检验和下沟前检验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-10" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-10" value=0> 
+                        <label class="option">未进行外防腐层补口补伤检验和下沟前检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-10" value=0> 
+                        <label class="option">外防腐层补口补伤检验或下沟前检验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-10" value=3> 
+                        <label class="option">外防腐层补口补伤检验和下沟前检验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-10" value=3> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.11.外防腐层漏点检验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-11" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-11" value=0> 
+                        <label class="option">未进行外防腐层漏点检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-11" value=0> 
+                        <label class="option">外防腐层漏点检验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-11" value=4> 
+                        <label class="option">外防腐层漏点检验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-11" value=4> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.12.外防腐层全面检验人员资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-12" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-12" value=0> 
+                        <label class="option">未进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-12" value=0> 
+                        <label class="option">外防腐层全面检验人员无相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-12" value=2> 
+                        <label class="option">外防腐层全面检验人员具备相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-12" value=2> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.13.外防腐层全面检验项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-13" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-13" value=0> 
+                        <label class="option">未进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-13" value=0> 
+                        <label class="option">外防腐层全面检验项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-13" value=4> 
+                        <label class="option">外防腐层全面检验项目和周期满足GB／T19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-13" value=4> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.14.外防腐层全面检验结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=0> 
+                        <label class="option">不进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=0> 
+                        <label class="option">管道区段的最大电流衰减率y>0．023</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=5> 
+                        <label class="option">管道区段的最大电流衰减率y∈(0．015，0．023]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=9> 
+                        <label class="option">管道区段的最大电流衰减率y∈(0．011，0．015]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=12> 
+                        <label class="option">管道区段的最大电流衰减率y≤0．011</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-14" value=12> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.15.外防腐层维护</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=0> 
+                        <label class="option">很少或者不关注外防腐层缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=0.5> 
+                        <label class="option">仅对部分外防腐层缺陷进行报告和修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=1> 
+                        <label class="option">非正式报告外防腐层缺陷，并在方便的时候才进行修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=2> 
+                        <label class="option">正式报告外防腐层缺陷，并形成修复计划，按计划进行修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-15" value=2> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.16.深根植被</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-16" value=0> 
+                        <label class="option">管道区段两侧各5 m范围内存在大量深根植物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-16" value=0.5> 
+                        <label class="option">管道区段两侧各5 m范围内存在少量深根植物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-16" value=1> 
+                        <label class="option">管道区段两侧各5 m范围内不存在深根植物</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.17.阴极保护系统产品质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-17" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-17" value=0> 
+                        <label class="option">阴极保护系统产品无质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-17" value=1> 
+                        <label class="option">阴极保护系统产品质量证明文件齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-17" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.18.阴极保护系统产品抽样复验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-18" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-18" value=0> 
+                        <label class="option">未进行阴极保护系统产品抽样复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-18" value=0> 
+                        <label class="option">阴极保护系统产品抽样复验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-18" value=2> 
+                        <label class="option">阴极保护系统产品抽样复验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-18" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.19.阴极保护系统安装过程质量控制</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=0> 
+                        <label class="option">未进行阴极保护系统安装过程质量控制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=0> 
+                        <label class="option">阴极保护系统安装过程质量控制不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=0.5> 
+                        <label class="option">阴极保护系统安装过程质量控制基本满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=1> 
+                        <label class="option">阴极保护系统安装过程质量控制满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-19" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.20.阴极保护系统投产测试</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=0> 
+                        <label class="option">未进行阴极保护系统投产测试</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=0> 
+                        <label class="option">阴极保护系统投产测试结果不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=1> 
+                        <label class="option">阴极保护系统投产测试结果基本满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=2> 
+                        <label class="option">阴极保护系统投产测试结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-20" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.21.阴极保护系统年度检查项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-21" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-21" value=0> 
+                        <label class="option">未进行阴极保护系统年度检查</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-21" value=0> 
+                        <label class="option">阴极保护系统年度检查项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-21" value=1> 
+                        <label class="option">阴极保护系统年度检查项目和周期满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-21" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.22.阴极保护系统年度检查结果及异常情况处理</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=0> 
+                        <label class="option">未进行阴极保护系统年度检查</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=0> 
+                        <label class="option">阴极保护系统年度检查结果不满足GB／T 19285的要求，并且未进行相应处理或处理不当</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=2> 
+                        <label class="option">阴极保护系统年度检查结果不满足GB／T 19285的要求，但及时进行了适当处理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=2> 
+                        <label class="option">阴极保护系统年度检查结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-22" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.23.阴极保护系统全面检验人员资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-23" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-23" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-23" value=0> 
+                        <label class="option">阴极保护系统全面检验人员无相应的资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-23" value=1> 
+                        <label class="option">阴极保护系统全面检验人员具备相应的资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-23" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.24.阴极保护系统全面检验项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-24" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-24" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-24" value=0> 
+                        <label class="option">阴极保护系统全面检验项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-24" value=2> 
+                        <label class="option">阴极保护系统全面检验项目和周期满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-24" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.25.阴极保护系统全面检验结果及异常情况处理</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=0> 
+                        <label class="option">阴极保护系统全面检验结果不满足GB／T 19285的要求，并且未进行相应处理或处理不当</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=7> 
+                        <label class="option">阴极保护系统全面检验结果不满足GB／T 19285的要求，但及时进行了适当处理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=7> 
+                        <label class="option">阴极保护系统全面检验结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-25" value=7> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.26.阴极保护系统测试头间距</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-26" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-26" value=0> 
+                        <label class="option">测试头间距＞3 km</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-26" value=0> 
+                        <label class="option">测试头间距∈[2 km，3 km]，或有部分交叉管道和套管未监控</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-26" value=1> 
+                        <label class="option">测试头间距＜2 km，并且对管道附近所有地下金属设施监控</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-1-26" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question" >3.2.集气管道、集油管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.1.土壤电阻率</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-1" value=0> 
+                        <label class="option">未进行土壤电阻率测量</label>
+        
+                        <input type="radio" name="fsdf-3-2-1" value=0> 
+                        <label class="option">土壤电阻率＜20 Ω·m</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-1" value=1.5> 
+                        <label class="option">土壤电阻率∈[20 Ω·m，50 Ω·m]</label>
+        
+                        <input type="radio" name="fsdf-3-2-1" value=3> 
+                        <label class="option">土壤电阻率＞50 Ω·m</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.2直流杂散电流干扰其排流措施</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=0> 
+                        <label class="option">直流杂散电流干扰程度大，并且未设置排流装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=0.5> 
+                        <label class="option">直流杂散电流干扰程度大，并且设置的排流装置不能完全满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=0.5> 
+                        <label class="option">直流杂散电流于扰程度中或小，并且未设置排流装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=1> 
+                        <label class="option">直流杂散电流干扰程度中或小，并且设置的排流装置不能完全满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=2> 
+                        <label class="option">置的排流装置能满足排流的需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-2" value=2> 
+                        <label class="option">不存在直流杂散电流干扰</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.3.交流杂散电流干扰</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-3" value=0> 
+                        <label class="option">存在交流杂散电流干扰</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-3" value=1> 
+                        <label class="option">不存在交流杂散电流干扰</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.4.防腐设计单位的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-4" value=0> 
+                        <label class="option">防腐设计单位不具备相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-4" value=1> 
+                        <label class="option">防腐设计单位具备相应资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.5.防腐设计标准规范的选用</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-5" value=0> 
+                        <label class="option">管道防腐设计未按标准规范设计或采用当时已经作废的设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-5" value=0.5> 
+                        <label class="option">管道防腐设计采用当时有效的旧版本管道设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-5" value=1> 
+                        <label class="option">管道防腐设计采用现行标准规范</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.6.防腐设计的适用性</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-6" value=0> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计不符合防腐设计标准规范要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-6" value=1> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计基本符合防腐设计标准规范要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-6" value=3> 
+                        <label class="option">外防腐层和／或阴极保护系统的设计符合防腐设计标准规范要求</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.7.外防腐层类型</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-7" value=0> 
+                        <label class="option">无外防腐层</label>
+        
+                        <input type="radio" name="fsdf-3-2-7" value=0.5> 
+                        <label class="option">是防锈油漆</label>
+        
+                        <input type="radio" name="fsdf-3-2-7" value=0.8> 
+                        <label class="option">是高密度聚乙烯</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-7" value=1> 
+                        <label class="option">是沥青加玻璃布</label>
+        
+                        <input type="radio" name="fsdf-3-2-7" value=2> 
+                        <label class="option">是三层PE复合涂层</label>
+        
+                        <input type="radio" name="fsdf-3-2-7" value=2> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-7" value=1.5> 
+                        <label class="option">是煤焦油瓷漆或环氧煤沥青</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">3.2.8.外防腐层质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-8" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-8" value=0> 
+                        <label class="option">外防腐层无质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-8" value=1> 
+                        <label class="option">外防腐层质量证明文件齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-8" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.9.外防腐层复验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=0> 
+                        <label class="option">未进行外防腐层复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=0> 
+                        <label class="option">外防腐层复验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=1> 
+                        <label class="option">外防腐层复验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=1> 
+                        <label class="option">不需要进行外防腐层复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-9" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.10.外防腐层补口补伤检验和下沟前检验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-10" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-10" value=0> 
+                        <label class="option">未进行外防腐层补口补伤检验和下沟前检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-10" value=0> 
+                        <label class="option">外防腐层补口补伤检验或下沟前检验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-10" value=1> 
+                        <label class="option">外防腐层补口补伤检验和下沟前检验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-10" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.11.外防腐层漏点检验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-11" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-11" value=0> 
+                        <label class="option">未进行外防腐层漏点检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-11" value=0> 
+                        <label class="option">外防腐层漏点检验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-11" value=1> 
+                        <label class="option">外防腐层漏点检验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-11" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.12.外防腐层全面检验人员资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-12" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-12" value=0> 
+                        <label class="option">未进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-12" value=0> 
+                        <label class="option">外防腐层全面检验人员无相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-12" value=1> 
+                        <label class="option">外防腐层全面检验人员具备相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-12" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.13.外防腐层全面检验项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-13" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-13" value=0> 
+                        <label class="option">未进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-13" value=0> 
+                        <label class="option">外防腐层全面检验项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-13" value=2> 
+                        <label class="option">外防腐层全面检验项目和周期满足GB／T19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-13" value=2> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.14.外防腐层全面检验结果</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=0> 
+                        <label class="option">不进行外防腐层全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=0> 
+                        <label class="option">管道区段的最大电流衰减率y>0．023</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=2> 
+                        <label class="option">管道区段的最大电流衰减率y∈(0．015，0．023]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=3> 
+                        <label class="option">管道区段的最大电流衰减率y∈(0．011，0．015]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=4> 
+                        <label class="option">管道区段的最大电流衰减率y≤0．011</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-14" value=4> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.15.外防腐层维护</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=0> 
+                        <label class="option">无外防腐层</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=0> 
+                        <label class="option">很少或者不关注外防腐层缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=0.5> 
+                        <label class="option">仅对部分外防腐层缺陷进行报告和修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=0.8> 
+                        <label class="option">非正式报告外防腐层缺陷，并在方便的时候才进行修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=1> 
+                        <label class="option">正式报告外防腐层缺陷，并形成修复计划，按计划进行修复</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-15" value=1> 
+                        <label class="option">不需要外防腐层</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.16.深根植被</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-16" value=0> 
+                        <label class="option">管道区段两侧各5 m范围内存在大量深根植物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-16" value=0.5> 
+                        <label class="option">管道区段两侧各5 m范围内存在少量深根植物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-16" value=1> 
+                        <label class="option">管道区段两侧各5 m范围内不存在深根植物</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.17.阴极保护系统产品质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-17" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-17" value=0> 
+                        <label class="option">阴极保护系统产品无质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-17" value=1> 
+                        <label class="option">阴极保护系统产品质量证明文件齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-17" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.18.阴极保护系统产品抽样复验</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-18" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-18" value=0> 
+                        <label class="option">未进行阴极保护系统产品抽样复验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-18" value=0> 
+                        <label class="option">阴极保护系统产品抽样复验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-18" value=1> 
+                        <label class="option">阴极保护系统产品抽样复验合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-18" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.19.阴极保护系统安装过程质量控制</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=0> 
+                        <label class="option">未进行阴极保护系统安装过程质量控制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=0> 
+                        <label class="option">阴极保护系统安装过程质量控制不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=0.5> 
+                        <label class="option">阴极保护系统安装过程质量控制基本满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=1> 
+                        <label class="option">阴极保护系统安装过程质量控制满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-19" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.20.阴极保护系统投产测试</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=0> 
+                        <label class="option">未进行阴极保护系统投产测试</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=0> 
+                        <label class="option">阴极保护系统投产测试结果不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=0.5> 
+                        <label class="option">阴极保护系统投产测试结果基本满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=1> 
+                        <label class="option">阴极保护系统投产测试结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-20" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.21.阴极保护系统年度检查项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-21" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-21" value=0> 
+                        <label class="option">未进行阴极保护系统年度检查</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-21" value=0> 
+                        <label class="option">阴极保护系统年度检查项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-21" value=1> 
+                        <label class="option">阴极保护系统年度检查项目和周期满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-21" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.22.阴极保护系统年度检查结果及异常情况处理</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=0> 
+                        <label class="option">未进行阴极保护系统年度检查</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=0> 
+                        <label class="option">阴极保护系统年度检查结果不满足GB／T 19285的要求，并且未进行相应处理或处理不当</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=2> 
+                        <label class="option">阴极保护系统年度检查结果不满足GB／T 19285的要求，但及时进行了适当处理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=2> 
+                        <label class="option">阴极保护系统年度检查结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-22" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.23.阴极保护系统全面检验人员资质</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-23" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-23" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-23" value=0> 
+                        <label class="option">阴极保护系统全面检验人员无相应的资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-23" value=1> 
+                        <label class="option">阴极保护系统全面检验人员具备相应的资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-23" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.24.阴极保护系统全面检验项目和周期</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-24" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-24" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-24" value=0> 
+                        <label class="option">阴极保护系统全面检验项目或周期不满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-24" value=2> 
+                        <label class="option">阴极保护系统全面检验项目和周期满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-24" value=2> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.25.阴极保护系统全面检验结果及异常情况处理</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=0> 
+                        <label class="option">未进行阴极保护系统全面检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=0> 
+                        <label class="option">阴极保护系统全面检验结果不满足GB／T 19285的要求，并且未进行相应处理或处理不当</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=3> 
+                        <label class="option">阴极保护系统全面检验结果不满足GB／T 19285的要求，但及时进行了适当处理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=3> 
+                        <label class="option">阴极保护系统全面检验结果满足GB／T 19285的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-25" value=3> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.26.阴极保护系统测试头间距</label>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-26" value=0> 
+                        <label class="option">未加阴极保护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-26" value=0> 
+                        <label class="option">测试头间距＞3 km</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-26" value=0> 
+                        <label class="option">测试头间距∈[2 km，3 km]，或有部分交叉管道和套管未监控</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-26" value=1> 
+                        <label class="option">测试头间距＜2 km，并且对管道附近所有地下金属设施监控</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="fsdf-3-2-26" value=1> 
+                        <label class="option">不需要进行阴极保护</label>
+                    </div>
+                </div>
+        
+            </form>
+        </div>
+        
+        
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                
+                <div class="c-footer__body">
+                    
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style">
+                    </div>
+                    
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+                </div>
+            </div>
+    </body>
+
+</html>

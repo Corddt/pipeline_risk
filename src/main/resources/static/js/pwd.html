@@ -1,0 +1,66 @@
+<!doctype html><html>
+<head>
+    <meta charset="utf-8"><title>中国石油大学（北京）克拉玛依校区信息门户</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"><meta content="yes" name="apple-touch-fullscreen"><meta content="telephone=no" name="format-detection"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/><link rel="stylesheet" href="../themes/sso_cupk/css/global.css"/><link rel="icon" href=" https://cup.edu.cn/images/favicon.ico"/><link rel="stylesheet" href="../themes/sso_cupk/css/verification.css"/><style>
+        .wayUl{ width:43%; margin:40px auto 60px; overflow:hidden;}
+        .wayUl li{ float:left; width:50%;}
+        .wayUl li a{ display:block; text-decoration:none;}
+        .wayUl li img{ display:block; margin:0 auto;}
+        .wayUl li span{ display:block; text-align:center; font-size:16px; color:#303030; line-height:25px; margin-top:15px;}
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="firstLoginBox">
+        <div class="retrieveTitle">
+            <h3>选择找回密码方式</span></h3>
+        </div>
+        <div class="wayBox">
+            <ul class="wayUl">
+                <li>
+                    <a href="forgetPwd~urlName=Y2FzTW9iaWxlUmVzZXRQYXNzd29yZA==.html" class="J_findway" data-id="casMobileResetPassword">
+                        <img src="../themes/sso_cupk/images/wayPic1.png"><span>通过手机验证<br>找回密码</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="forgetPwd~urlName=Y2FzRW1haWxSZXNldFBhc3N3b3Jk.html" class="J_findway" data-id="casEmailResetPassword">
+                        <img src="../themes/sso_cupk/images/wayPic2.png"><span>通过邮箱验证<br>找回密码</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerBox">
+        <div class="footer">
+            <p>中国石油大学(北京)克拉玛依校区 ICP备案: 京ICP备09080943号-7 Copyright @ 2023</p>
+        </div>
+    </div>
+</div>
+<script src="../themes/common/jquery-3.7.1.min.js"></script>
+<script src="../themes/common/jquery.cookie.js"></script>
+<script src="../themes/sso_cupk/js/casForgetPwd.js"></script>
+<script src="../themes/sso_cupk/js/Base64Utils.js"></script>
+<script src="../themes/sso_cupk/js/flexible.js"></script>
+<script>
+    var temp = null;
+    if(temp){
+        $.post("./valid", {temp
+        }, function(result) {
+            if (result.code == "1") {
+                $('.iphoneBox').show();
+            } else {
+                $(".completPart").html(result.msg);
+                $('.completBox').show();
+            }
+        });
+    }else{
+        $('.completBox').show();
+    }
+    $('.completButton').click(function(){
+        window.location.href = "../"
+    })
+</script>
+</body>
+</html>
+

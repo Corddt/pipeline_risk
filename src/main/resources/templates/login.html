@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>中国石油大学（北京）克拉玛依校区统一身份认证</title>
+    <link rel="stylesheet" href="/static/themes/sso_cupk/css/index.css" />
+    <link rel="icon" href=" https://cup.edu.cn/images/favicon.ico" />
+    <script src="/static/js/wwLogin-1.0.0.js"></script>
+</head>
+<style>
+    input::-ms-clear, input::-ms-reveal { display: none; }
+</style>
+
+<body onload="changeLoginWay('login')">
+<div class="wrap">
+    <div class="logo"></div>
+    <div class="loginCont">
+        <div class="loginTable">
+            <img src="/static/themes/sso_cupk/images/logo.png" style="margin-top: 20px; width: 100%;">
+            <h1>统一身份认证</h1>
+            <h2 class='comeSoon'>即将登录 → 管道评估系统</h2>
+            <div class="loginToggle">
+                <a href="javascript:void(0);" id="account" class="login-select" onclick="changeLoginWay('login')">登录<b></b></a>
+                <a href="javascript:void(0);" id="phone" class="login-select" onclick="changeLoginWay('signup')">注册<b></b></a>
+            </div>
+            <div class="account-table">
+                <form method="post" id="fm1" class="loginForm" action="login">
+                    <input type="hidden" name="execution" value="26f88ea9-f75c-4bea-a7cb-741431cb6d33_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuT3BMc0EyZ3NxL3lmQ29XWDJhKytIN1A5MTFjWlYrUklsdXVhVklrQ04zNzVNeTF2dDRFbkkyNDhUWk43WXAzMVV0U0txRnd2cFNBcXZHMmdwZjhDWU5KVFdMRXVqVjJrNmtwTW1NdmNqU3dGZjd5ZWlnUmEwYjBhRlI1UHdiYnZmS2N4WkxBV2cwV2Fnc1hDeGpIZjVkd2x2aUJnTGgwSzZXYlUyMzB5cStGWWF6S2U2a2lGZHhqNmdYTElsOUIzeEp4WUw0NnhWdDJndlErdkVqZmt5cDdDVkE1N3lqb05ma2NEWVd4WGZRNGdpcjRzRnAwRzhXalB3bmhmMy85YjVUUmhGWUJrUDZKNHF1K0NWNldTb0U1OFl5emp3dVhZTzM2YmcyRDc0SkN5MTdoWDZuQi9aRFpNRnBjWmw1eTVRT054UGZWNGtwM0VOcTkrRWpzWjRWL2Rway93cE5vZTd2bE10ZlBySlZ0cFJvUTlzaU5BSkp4ZnVYUkhjbHM4cHR4Y0czbHdKbEpzWXVVQlRhRVhVbmlST0E2Tys5Mjk4YW83V3I3YWk5aU5VUlc0L2IvbExBUXQ5bkNCOWJXMnBCUEdCbHMxcFFua0FqRUl6QVgrY3pkZVcyZW40NVVWRVdnNW1Dd2diTWkwaHZmMXRUbUpNRy9GcVREcTNURU5JR0lnNG11ZG1zN2N3c28wNDEyMkFzT05rZ1hLY3RwMXB5ZDMydkhVOFpid0V4b3ZZbmhKNVVWekp1WGFkSUpNSWY5ZjhGU3dCVkYrQjA0bDI1T1hoeEllVkZJbEhDSVVFRjA1Y0tVQmRUdmRaNTl5Y0wyVlFRaEdpazVCUWMrRHpTOVNWRVA2cXh6WnNoOXhTWDVSdXpLenpPd3FJdTZwWU9PUVR4aWovak1vQVMwbmYxaUxqUjViT1QvYnljc0ptdzRWOTlsY29kVlR4MGIvdzVDd3dNdkE4TEx4bGZCWERYVVhtcDdsUFAxRlJ2eG5EQWx1aUczL0V2ZTF4dlpHYktZWEhxWXcybTd2RTVqVW8zMUNNOW42Z3VZTUNuaFd6K2N5UGFFS3F6Q3hCdjltV1FQaVk5SGVDWG1IVkxxeFZmemVsd3haWFhReVBzZ0VYRHBnQUxxRENSb1dSR2swc2RpRHhiOVdteW9BVmVoeGRIZEl0MU12dnQ0YkJoeG5FNWdicjNBV1ZrMmN5YVpuTjU0NDlWS0FJVTNyeS9YUFJaUHlZeFptRmUzVGJ5TEpEY0lIZDljMHpheXpPQm14NElMa2JTaWRSQ0J6ZUJHMmVpWDZmcStrd1VjNVJDNlpsRGVDU3ZNMml2K2x3ZVdZNUlYUkNBQ2syaVBLTHVMUGI5dHJhanRnR1hnbzdWaVZwZThVOWRhdjFkZWJ4NzdvVTlFdE5MUGRxU05OWXF0T3hHNFpOR2UybkhPdnp4VlhPQUxjRXowTTBRQXc1MEZEeXErcFZGSUVKWjZEekRHSXRBWkc1NXJWZS9CVGNsRzhKN2ZHRzREWncreVM4NkxzY0t0MTZTOWFDZU82YmxzRzJIaFFLZEI3c05GSE0vWU5vZVk4aFlWTThscjVpSFFUZ2ZMZG9wRGlEcGFHWlUwdC9PdTRIYUpjRi9ZMkJSYWFucTNwbWg3QzlleWlnL1ZkS3ZJSFYrZDY2NEZuaFlOWVAxL2xyMDVmdXBOV1p6K29CcHZJd1ZqSjd3UVNxMHBhMWhJeW1meUlrVisyZEx6U1hYejRlVXkvRHZEY01QL01jVnYrTUpqcjV5TUhlaTJMeVB0ZjJlOVczQXJQQVNBeW5sSFRENzZrQ0tXMEJka2FsWVdtZHF2SWJaQXNUeXBZaGQwOHV5NlB2clQ1bXJtaFJtdk8yVmR1UlFLRmUzcVVrVUhEaDFobHdvYktRNmM5ZFIzNDBMUWEwR2xaV0c1Zld1WDVjSEdkVFB5YnVxU1JIUG80Y2hUK2dVY0lSMXlUYzBzK3hteGNhL2VQRnZtZ3A4bEptVzVEaVVBSExXa2NZVGRuUFpUSnZzanpvYW50TUxiUC9rWEZVSkpleE1DWWJvSnpySmNaWlA1Qk51Z0hZK2dzYjBkTjJTcGJKWGl2RFIySU15cVhyY2FUSGRZY2F3Qkh2Z2ZVSzVLTEM4K29nUDZZY1VDT3R5UGJjcFd2TkZnL3lEZ2JpYTBjeVQrVjBCcHh1a1ZmM1JoTDlBK2U0MjBOM1BGMnNOM0RlTXF3bzErQUF1dkNtQVFlOTY1OGFPVmRtZ3N3dyt3R1d0MWNvNmlIRHN0RVVuZlpRWkxWdk11YWdMV09HclhXOERpYVlKUER3eUNUSTV3bFJyR1h6Y2dSSGhyaDhUb0tKdmhwQWhmVks2bVBHbFA0Rkw2blIrWE1rK2VZN21RelFOUVpDa3VHZXM2K0NhbzByQVBUR1BYakdFb0g5Ryt4K1lsRTBzL3Y3UTlUSkJpWC9UMkVnWWdDQ0hCOVArMmxCelJ2Z2lSQ2FtK2sxUEVXUEdYcFgxWGlYVDlCeUJzdlBKSDV2eHYxKzVpY2cyZ0diWS9hNi9XYWdnT2NDUEI3VElyUnpTa0ZvclBveHU1L0c2Vkw5dFBUdHUydGpWWUpJSDhjRVd2UHZ1MnozeGE0T2d6WDJIcnd3NFVDVUlRWUc2M05EZWpGTjRWN01WRE92ZGdYbjFCNzdDVjRSdnUrOGZuRDE2b2RKZzArWHlYT2t4MDZ1b3BpcEd4RkdUTVdRVHlpbG4vcEFuY3p1b202QjFESHo5Qm1PbnlUQlpBWGYvSThXS3RyMlhRM2xHbVI2VUlwMkthZ1ZJbS9TRmJxTHBFU3IyOE8zeHVGU25mRjV4Q1hlRzBpYVJLREo2d0oxL0dYc2NrYzZ2QnR5a0JNaVdLakwydDZFTk8xOXp1R25jRlgzaUtrMGZUWkVsSEhIMjUrZm9oV1I4enlkaGVzSzZiY0xFaVlod0xGbkxxMU1jMXRERVgvbEdXTkUydkJROXdadmx3cVBxNVRja3JkSzlManA5UU16dzBjTTR0OUEzMUtIclB6WHlkS1ZJSVBrSWVwQ0Rjc25mZ2I5V3ZFQytjYlVsbkhSTTVjZGxWRnFCRW1JeDNxcUxLOHN5TmpmcE9CNEcyUGhwZWJSWmt1bDM3STBPR0c3U2VqWTE5dXdDNXV0T2RSQ2kwVlg5RFFKQi9XcStwbnZDRUlmVURHRVN4Q0RudWo0WkEyN1RRVEpHRzJ0aXVpbjlud2R3WmRUVlZXQUQyNlhCOXorRUtaRzdySUVwRDVKUEIrN1ZlRUo4d3RhbkFDUWdRQk9pMkh0NHgvOUh0eFJFSlBuYU0wNmZhL1lXUERXQTYxMVhUbHAvcFQrWlBXN3k5bEVaVmhiTEVLNHl0UGtrNTNKR2xIT2c0TXcyR1JSZEwxM2hSS0ZBSGZVaXZ4a2JBdlZoQUwzdng4ZHpKT0hpcXYxcVh3OTFxOHA4SGpPWmFpWWNTblFvWWl5MUZhSmprVnZqR0tiVFM3S1JCUW8rMDdXaTQ0U3FpWmV6R25TWjVzc3N1NHVmUWdKVHR5elBvV0huMG8yWWw3Qmk4Rjh6TVJRQVkrMXdOUE51d1pMUFRuZnB2dVVKazZuYWNjZ1JOdXF0Y2Ria2pPZ2VUODJTamg3Zm0zTnVJWkluZHhLcHNvd1NXZ3hnUVA5ejg4cVJybGxhK3VsODdSdCs4MGJoRUtlcjBlc1BxSGNkOWFnYS9peFBKNzA2b29QMVNRSDlyRER4Y0E2RHFJa3hhNCs1bm1IZ2NyNkdMOSs0WDRwMGNhcHdZVTVaVUc4cGRKY0QrNzFCMllzdjBNbnZOQmFNckVnUTIrblNuZzcxdUJJdHVlT3dEVVNaZURTNVROQTU5NzVrWEVVcUZjR2ZtUmRBa0hXY2VYRERqZVNvZVF5KzNCMHlyTFg3Y1FPdG9rby9SR0phdzh6a2p3V0ZYK1NoYkkyTGxVb1NCRmdUNURpRENPMFVZcnR1bEM4a3Fpc0VuV2pLdWIyZWZKSzR0bS9tQStaYW82eDU5Mk5hcVI3cG5zWTY4VnVibHNwK1FHbm93NEJTdmVjSThlSm9xcDR1UEFiRlc4cjZDbjRtSytkMWNCaDF0NXV5WFVleHBtU3dFRmVPUVd0eFA4V1cyOUJGRSt4cjV0SDBuSnQ1RzlaYUZwc3RsY3g3eGMvOTN3TTVsMldLVHl3dk1ZVDFSUTNyWG5Ta0hiRGwxTld5eDZmTHJyNmdRaHQwc28wbm5QR2FaZVRWUUYwcXkvcURmVG9qaVRNM1k4R3JqVldnZkNNRHhod2RMb2pVeTlOZU9ZUEl1UWlBZUgyVVY0R25Xdi9DN1YrQUJmQVcyOVEzeS8wRko4Tk12aVpYcTRtbjBrWnY5UlRONGpQa1ZTNGZQVkx4dUNUc09KUUUreDNiY2l0dVhxSkx5RGdBV2RyYUJHcW5RYlNjSzZhRitFTFNTVzdONFhqbzdTNmRWVHhHUW9NTG9WQXVRRVB1WnRRREg5Vk9LUTFwSW4raUhwbzdaNzRPU1Z1cGxJSENDblZuY2JHazF2cm5CcnF0RGtxQ2Q0ZkxzODlJRmt0bzJsUC9QMXBWSjJ6eW5QSk94WE4wc1diSnRBWDFDS3lnbDRyZTRHVXhZTFhGaDR1U3JqSjZOK1FFcS9TOUlRTWtFZ01tQUVuWHJGTFFiY0l5a3hPWDRoZmU2U0s0NDNGaUM4Q1FMUTNKWWhVblpYcGZHLzVlc0ZZUDUxUnlqdm9DT2VrOGVESlBIMG1EcUpSV1M1RnRrM1ZhTWJTNHZ6ckVZUTdDM3BFS2k3VWtva1poWEVmUW0ySjRRODZwc3J0V0I0RDYzbnlmMTBUQ1pLalVHUzJ3OEpqOEJtOGwzVmpYL0JPSERBcCt5U0h1MHRGdmNUanRGTm85TTVZTEpqMlVCTzNTc2lrV0k0UHRGOGErVWRJUUxTSzRJbmJQWGdRWlplMWdtSWhaMU9PR3M9LktudFpsOGNwZjZpQWhvbnR6RXJRZlJCSkpCRHVBdFRuNlRwdTMzYUsxNjVsWXNwRWkzRjVDb1FROVhieUg5TExVUjVUb0hiRkx4Rkk5QlY3OEQybDlR" />
+                    <input type="hidden" name="_eventId" value="submit" />
+                    <input type="hidden" name="geolocation" />
+                    <input type="hidden" id="loginType" name="loginType" value="username">
+                    <input type="hidden" id="userLoginSystem" name="system" value="27A5A4DF0C874122A0AFE0367F0A3F46">
+                    <input type="hidden" id="enableCaptcha" name="enableCaptcha" value="Y">
+                    <div class="account-toggle" style="display: block;" id="login">
+                        <table class="account" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <input class="userpass userName" name="username" id="username" type="text" placeholder="请输入用户名" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="userpass password" name="password" id="password" type="password" placeholder="请输入密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入密码'">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="passError" id="msg"></td>
+                            </tr>
+                            <tr>
+                                <td class="login-button">
+                                    <input class="userButton" type="button" value="登录">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="remember">
+                                    <a href="/static/js/pwd.html" id="J_fogetUserPwd2">忘记密码 ？</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--用户注册-->
+                    <div class="account-toggle" id="signup">
+                        <table class="account" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <label for="username">用户名:</label>
+                                    <input class="userpass userName" name="username" id="username" type="text" required>
+                                    <span id="usernameError" style="color: red;"></span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">密码:</label>
+                                    <input class="userpass password" name="password" id="password" type="password" oninput="checkPasswordStrength()" required>
+                                    <span id="passwordError" style="color: red;"></span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="login-button">
+                                    <input class="userButton" type="button" value="注册" onclick="registerUser()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p></p>
+    </div>
+</div>
+<script src="/static/themes/common/jquery-3.7.1.min.js"></script>
+<script src="/static/themes/common/jquery.cookie.js"></script>
+<script src="/static/themes/sso_cupk/js/casLoginView.js"></script>
+<script src="/static/themes/sso_cupk/js/flexible.js"></script>
+<script src="/static/themes/sso_cupk/js/Base64Utils.js"></script>
+<script src="/static/themes/common/jsencrypt.js"></script>
+<script>
+    function checkPasswordStrength() {
+        const password = document.getElementById('password').value;
+        const passwordError = document.getElementById('passwordError');
+
+        const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})");
+
+        if (!strongRegex.test(password)) {
+            passwordError.textContent = "密码强度不足,请包含大小写字母、数字和特殊字符,且长度至少为8位";
+        } else {
+            passwordError.textContent = "";
+        }
+    }
+
+    async function registerUser() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const usernameError = document.getElementById('usernameError');
+        const passwordError = document.getElementById('passwordError');
+
+        usernameError.textContent = "";
+        passwordError.textContent = "";
+
+        const checkResponse = await fetch(`/user/check?username=${username}`);
+        const isTaken = await checkResponse.json();
+
+        if (isTaken) {
+            usernameError.textContent = "用户名已存在";
+            return;
+        }
+
+        checkPasswordStrength();
+        if (passwordError.textContent !== "") {
+            return;
+        }
+
+        const response = await fetch('/user/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
+
+        if (response.redirected) {
+            window.location.href = response.url;
+        } else {
+            const result = await response.text();
+            alert(result);
+        }
+    }
+
+    $(document).ready(function() {
+        var str = window.location.search;
+
+        var i1 = str.indexOf("/");
+
+        var opt2 = str.indexOf("/", str.indexOf("/", str.indexOf("/") + 1) + 1);
+
+        var a = str.substring(i1 + 2, opt2);
+    })
+</script>
+</body>
+
+</html>

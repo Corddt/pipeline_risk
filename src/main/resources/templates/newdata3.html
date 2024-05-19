@@ -1,0 +1,896 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+
+
+        <style>
+            p{
+              font-size: 350%;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              text-align: center;
+              margin-top: 4vh;
+              
+            }
+      
+            .container {
+                display: flex;
+                background-color:rgb(198, 255, 255);
+                box-shadow: 10px 5px 5px lightgrey; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: -30%;
+                margin-right: 30%;
+                width:140vh;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 50px 0;
+                border-radius: 10px;
+                
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 3vh;
+            }
+
+            .button {
+                background-color: rgb(198, 255, 255); 
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 10px 10px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(198, 255, 255); 
+                color: black; 
+                border: 2px solid #008997;
+                height: 6%;
+                width: 80%;
+            }
+
+            .button:hover {
+                background-color: #008997;
+                color: white;
+            }
+
+            .button:active {
+                background-color: #0367a6;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '»';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .text {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+    
+            .rows{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%;
+                margin-left: 15%;
+                margin-right: 15%;
+                align-items: center;
+                gap: 1vh;
+            }
+            .question {
+                position: relative;
+                font-weight: bold;
+                font-size: 140%;
+                margin-left: 15%;
+                word-wrap: break-word; /* 允许在单词内部换行 */
+                overflow-wrap: break-word; /* 与 word-wrap 作用相同，是较新的属性名 */
+            }
+            .option{
+                font-size-adjust: 1;
+                font-weight: bold;
+                font-size: 2vh;
+                flex-grow: 1;
+                
+            }
+            .back_button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+      
+          </style>
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function openPage(x) {
+              window.open(x, "_self");
+        }
+
+        function opendivs(x) {
+          var div = document.getElementById(x);
+          if (div.style.display === "none") {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+            </div>
+        </div>
+        <div class="container2">
+            <button class="button" onclick="opendivs(1)">一、设备(装置)功能及安全质量</button>
+            <form id=1 style="display: none">
+        
+                <div class="container">
+                    <label class="question">1.1.设备(装置)性能和操作性</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-1" value=0> 
+                        <label class="option">设备(装置)不满足技术要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-1" value=1> 
+                        <label class="option">设备(装置)满足技术要求，但性能稳定性较差，操作不方便</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-1" value=3> 
+                        <label class="option">设备(装置)满足技术要求，安全可靠，但操作不方便</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-1" value=5> 
+                        <label class="option">设备(装置)满足技术要求，安全可靠，操作方便</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.设备(装置)质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-2" value=0> 
+                        <label class="option">设备(装置)无质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-2" value=2> 
+                        <label class="option">设备(装置)质量证明文件齐全</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.设备(装置)检验周期</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-3" value=0> 
+                        <label class="option">设备(装置)不检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-3" value=0> 
+                        <label class="option">设备(装置)检验周期不满足有关法规的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-3" value=2> 
+                        <label class="option">设备(装置)检验周期满足有关法规的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-3" value=2> 
+                        <label class="option">设备(装置)不需要检验</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.4.设备(装置)检验结果</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=0> 
+                        <label class="option">设备(装置)不检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=0> 
+                        <label class="option">设备(装置)检验结果表明应停止使用或报废</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=1> 
+                        <label class="option">设备(装置)检验结果表明应监控使用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=3> 
+                        <label class="option">设备(装置)检验结果表明应在限定条件下安全使用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=5> 
+                        <label class="option">设备(装置)检验结果表明可在设计条件下安全使用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-4" value=5> 
+                        <label class="option">设备(装置)不需要检验</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.设备(装置)计量周期</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-5" value=0> 
+                        <label class="option">设备(装置)不计量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-5" value=0> 
+                        <label class="option">设备(装置)计量周期不满足有关法规、标准和质量体系文件的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-5" value=2> 
+                        <label class="option">设备(装置)检验周期满足有关法规、标准和质量体系文件的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-5" value=2> 
+                        <label class="option">设备(装置)不需要计量</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.6.设备(装置)计量状态</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-6" value=0> 
+                        <label class="option">设备(装置)不计量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-6" value=0> 
+                        <label class="option">设备(装置)超过计量有效期</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-6" value=4> 
+                        <label class="option">设备(装置)在计量有效期内</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-6" value=4> 
+                        <label class="option">设备(装置)不需要计量</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.7.超压保护装置</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-7" value=0> 
+                        <label class="option">无超压保护或报警系统</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-7" value=1> 
+                        <label class="option">具备超压报警装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-7" value=2> 
+                        <label class="option">具备超压手动保护系统</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-7" value=3> 
+                        <label class="option">具备超压自动保护系统</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.8.通讯系统</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-8" value=0> 
+                        <label class="option">通讯设备未固定专用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-1-8" value=2> 
+                        <label class="option">各个站间配有专用通讯系统和工具</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(2)">二、设备(装置)维护保养</button>
+            <form id=2 style="display: none">
+        
+                <div class="container">
+                    <label class="question">2.1.维护保养规程</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-1" value=0> 
+                        <label class="option">无设备(装置)维护保养规程</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-1" value=3> 
+                        <label class="option">设备(装置)维护保养规程不完整</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-1" value=5> 
+                        <label class="option">设备(装置)维护保养规程完整、正确</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.维护保养计划</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-2" value=0> 
+                        <label class="option">无维护计划</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-2" value=1> 
+                        <label class="option">进行不定期维护</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-2" value=2> 
+                        <label class="option">进行定期维护</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.3.维护保养方式</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-3" value=0> 
+                        <label class="option">不维护保养</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-3" value=2> 
+                        <label class="option">仅进行保养，不修理或更换</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-3" value=3> 
+                        <label class="option">进行保养，并且必要时修理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-3" value=5> 
+                        <label class="option">进行保养，并且必要时更换</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.维护保养记录</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-4" value=0> 
+                        <label class="option">未进行维护保养</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-4" value=0> 
+                        <label class="option">无维护保养记录和相关图纸</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-4" value=1> 
+                        <label class="option">维护保养记录和相关图纸不完整</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-2-4" value=3> 
+                        <label class="option">维护保养记录和相关图纸齐全</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(3)">三、设备(装置)操作</button>
+            <form id=3 style="display: none">
+        
+                <div class="container">
+                    <label class="question">3.1.操作规程</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-1" value=0> 
+                        <label class="option">无设备(装置)操作规程</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-1" value=2> 
+                        <label class="option">设备(装置)操作规程不完整</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-1" value=4> 
+                        <label class="option">设备(装置)操作规程完整、正确，但未放置于操作现场</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-1" value=6> 
+                        <label class="option">设备(装置)操作规程完整、正确，并且放置于操作现场</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.操作规程执行情况的审查</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-2" value=0> 
+                        <label class="option">对操作规程执行情况未进行审查</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-2" value=4> 
+                        <label class="option">对操作规程执行情况进行一级审查(内部审查)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-2" value=6> 
+                        <label class="option">对操作规程执行情况进行二级审查(内部审查、外部审查)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-2" value=8> 
+                        <label class="option">对操作规程执行情况进行三级审查(内审、外审、第三方审查)</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.3.操作记录和日志</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-3" value=0> 
+                        <label class="option">无操作记录和日志</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-3" value=2> 
+                        <label class="option">操作记录和日志不齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-3" value=5> 
+                        <label class="option">操作记录和日志齐全</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.4.操作员工的专业</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-4" value=0> 
+                        <label class="option">操作员工未在相关专业中专或大专完成系统学习</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-4" value=1> 
+                        <label class="option">操作员工在相关专业中专或大专完成了系统学习</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.5.操作员工的经验</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-5" value=0> 
+                        <label class="option">操作员工无相关岗位工作经验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-5" value=1> 
+                        <label class="option">操作员工具备相关岗位3年以下工作经验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-3-5" value=3> 
+                        <label class="option">操作员工具备相关岗位3年及3年以上工作经验</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(4)">四、防错装置</button>
+            <form id=4 style="display: none">
+        
+                <div class="container">
+                    <label class="question">4.1.硬件的适用性</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-1" value=0> 
+                        <label class="option">硬件不适用于防止误操作</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-1" value=1> 
+                        <label class="option">硬件设计合理，适用于防止误操作</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">4.2.硬件的适用性</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-2" value=0> 
+                        <label class="option">硬件制造单位无相应制造资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-2" value=2> 
+                        <label class="option">硬件制造单位有相应制造资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-2" value=2> 
+                        <label class="option">硬件制造单位不需要制造资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">4.3.联锁装置</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-3" value=0> 
+                        <label class="option">无联锁装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-3" value=3> 
+                        <label class="option">具有可靠的自动联锁装置</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">4.4.通过计算机软件控制操作步骤的顺序</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-4" value=0> 
+                        <label class="option">不通过计算机软件控制操作步骤控制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-4" value=0> 
+                        <label class="option">通过计算机软件控制操作步骤控制，但软件的可靠性和健壮性未经证实</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-4-4" value=3> 
+                        <label class="option">通过计算机软件控制操作步骤控制，并且已经证实软件的可靠性和健壮性</label>
+                    </div>
+                </div>
+            </form>
+        
+            <button class="button" onclick="opendivs(5)">五、安全管理制度</button>
+            <form id=5 style="display: none">
+        
+                <div class="container">
+                    <label class="question">5.1.安全责任制</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-1" value=0> 
+                        <label class="option">无安全责任制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-1" value=2> 
+                        <label class="option">有安全责任制，但未严格执行</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-1" value=4> 
+                        <label class="option">安全责任制健全，并严格执行</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">5.2.安全机构和人员</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-2" value=0> 
+                        <label class="option">无安全机构和人员</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-2" value=2> 
+                        <label class="option">设置安全机构，但人员缺乏</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-5-2" value=4> 
+                        <label class="option">设置安全机构，配备充足的专、兼职人员</label>
+                    </div>
+                </div>
+            
+            </form>
+        
+        
+            <button class="button" onclick="opendivs(6)">六、人员培训与考核</button>
+            <form id=6 style="display: none">
+            
+                <div class="container">
+                    <label class="question">6.1.培训制度</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-1" value=0> 
+                        <label class="option">无培训制度，由领导临时决定是否进行培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-1" value=1> 
+                        <label class="option">没有建立培训制度，只对部分岗位的员工进行培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-1" value=3> 
+                        <label class="option">培训写入企业管理规章制度中，但仅对部分员工进行培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-1" value=5> 
+                        <label class="option">培训写入企业管理规章制度中，并得到良好执行</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">6.2.培训内容</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-2" value=0> 
+                        <label class="option">不进行培训</label>
+        
+                        <input type="radio" name="sbgn-6-2" value=0> 
+                        <label class="option">培训无实质性内容</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-2" value=2> 
+                        <label class="option">培训内容不全面，但进行了简单的培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-2" value=4> 
+                        <label class="option">培训内容全面，包括操作、操作规程、岗位对人员素质的要求等全部内容</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">6.3.培训材料</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-3" value=0> 
+                        <label class="option">不进行培训</label>
+        
+                        <input type="radio" name="sbgn-6-3" value=0> 
+                        <label class="option">没有正式培训材料</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-3" value=2> 
+                        <label class="option">培训材料简单，未经专家审核</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-3" value=4> 
+                        <label class="option">培训材料完整，并由行业内专家审核</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">6.4.培训及考核方式</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-4" value=0> 
+                        <label class="option">无培训制度，由领导临时决定是否进行培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-4" value=0> 
+                        <label class="option">进行没有考核的简单一次性培训</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-4" value=2> 
+                        <label class="option">进行一次性培训，培训结束后对员工进行笔试</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-4" value=4> 
+                        <label class="option">定期持续培训，培训结束对员工进行面试、笔试评估等</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">6.5.对培训考核成绩优异的员工的奖励</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-5" value=0> 
+                        <label class="option">不对培训考核成绩优异的员工进行奖励</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-5" value=1> 
+                        <label class="option">对培训考核成绩优异的员工进行奖励</label>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <label class="question">6.6.对员工自发参加相关培训班的奖励</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-6" value=0> 
+                        <label class="option">不对员工自发参加相关培训班进行奖励</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-6" value=1> 
+                        <label class="option">对员工自发参加相关培训班进行奖励</label>
+                    </div>
+                </div>  
+            
+                <div class="container">
+                    <label class="question">6.7.实际操作考察</label>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-7" value=0> 
+                        <label class="option">不注重对员工进行实际操作考察</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="sbgn-6-7" value=1> 
+                        <label class="option">注重对员工进行实际操作考察</label>
+                    </div>
+                </div> 
+            
+            </form>
+        
+        </div>
+        
+        
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                
+                <div class="c-footer__body">
+                    
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style">
+                    </div>
+                    
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+                </div>
+            </div>
+    </body>
+
+</html>

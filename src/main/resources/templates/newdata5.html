@@ -1,0 +1,1013 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+
+
+        <style>
+            p{
+              font-size: 350%;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              text-align: center;
+              margin-top: 4vh;
+              
+            }
+      
+            .container {
+                display: flex;
+                background-color:rgb(198, 255, 255);
+                box-shadow: 10px 5px 5px lightgrey; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: -30%;
+                margin-right: 30%;
+                width:140vh;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 50px 0;
+                border-radius: 10px;
+                
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 3vh;
+            }
+
+            .button {
+                background-color: rgb(198, 255, 255); 
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 8px 8px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(198, 255, 255); 
+                color: black; 
+                border: 2px solid #008997;
+                height: 6%;
+                width: 80%;
+            }
+
+            .button:hover {
+                background-color: #008997;
+                color: white;
+            }
+
+            .button:active {
+                background-color: #0367a6;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '»';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .text {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+    
+            .rows{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%;
+                margin-left: 15%;
+                margin-right: 15%;
+                align-items: center;
+                gap: 1vh;
+            }
+            .question {
+                position: relative;
+                font-weight: bold;
+                font-size: 140%;
+                margin-left: 15%;
+                word-wrap: break-word; /* 允许在单词内部换行 */
+                overflow-wrap: break-word; /* 与 word-wrap 作用相同，是较新的属性名 */
+            }
+            .option{
+                font-size-adjust: 1;
+                font-weight: bold;
+                font-size: 2vh;
+                flex-grow: 1;
+                
+            }
+            .back_button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+      
+          </style>
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function openPage(x) {
+              window.open(x, "_self");
+        }
+
+        function opendivs(x) {
+          var div = document.getElementById(x);
+          if (div.style.display === "none") {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+            </div>
+        </div>
+        <div class="container2">
+            <button class="button" onclick="opendivs(1)">一、介质的短期危害性</button>
+            <form id=1 style="display: none">
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.1.介质燃烧性</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.1.介质的燃烧性</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-1" value=0> 
+                        <label class="option">介质不可燃</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-1" value=3> 
+                        <label class="option">介质可燃，介质闪点>93℃</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-1" value=6> 
+                        <label class="option">介质可燃,介质闪点E(38℃,93℃]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-1" value=9> 
+                        <label class="option">介质可燃,介质闪点≤38℃并且介质沸点≤38℃</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-1" value=12> 
+                        <label class="option">介质可燃,介质闪点≤23℃并且介质沸点≤38℃</label>
+                    </div>
+                </div>
+        
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.2.介质反应性</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.1.低放热值的峰值温度</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-2-1" value=0> 
+                        <label class="option">峰值温度；>400℃</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-2-1" value=2> 
+                        <label class="option">峰值温度区间为(305℃,400℃]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-2-1" value=4> 
+                        <label class="option">峰值温度区间为(215℃,305℃]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-2-1" value=6> 
+                        <label class="option">峰值温度区间为(125℃,215℃]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-2-1" value=8> 
+                        <label class="option">峰值温度≤125℃</label>
+                    </div>
+                </div>
+        
+                <input type="radio" name="hgdf-1-2-2"  id="hgdf-1-2-2" style="display: none;">
+                
+                <script>
+                    var radioButton = document.querySelector('input[type="radio"][name="hgdf-1-2-2"]');
+                    radioButton.checked = true;
+                </script>
+            
+                <div class="container">
+                    <label class="question">1.2.2.最高工作压力</label>
+                    
+                    
+                    <div class="rows">
+                        <label class="option">请选择管道所输送的介质:</label>
+                        <input type="radio" name="hgdf-1-2-2-1" value=0> 
+                        <label class="option">液体</label>
+            
+                        <input type="radio" name="hgdf-1-2-2-1" value=1> 
+                        <label class="option">气体</label>
+                    </div>
+                    <div class="rows">
+                        <label class="option">请输入管道最高工作压力(MPa): <span style="margin-left: 3vh;"><input id="hgdf-1-2-2-2-input"></span></label>
+                    </div>
+                </div>
+        
+                <script>
+                    var pmax2 = parseFloat(document.getElementById('hgdf-1-2-2-2-input').value);
+        
+                    var radioButton = document.querySelector('input[type="radio"][name="hgdf-1-2-2"]');
+                    var radioButton2 = document.querySelector('input[type="radio"][name="hgdf-1-2-2-1"]');
+        
+                    if (radioButton2.value=='0') {
+                        if (pmax2 <= 0.68) {
+                            radioButton.value = 0;
+                        } else {
+                            radioButton.value = 4;
+                        }
+                    } else if (radioButton2.value=='1'){
+                        if (pmax2 <= 0.34) {
+                            radioButton.value = 0;
+                        } else if (pmax2 > 0.34 && pmax2 <= 1.36) {
+                            radioButton.value = 2;
+                        } else {
+                            radioButton.value = 4;
+                        }
+                    }
+                    
+                </script>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.3.介质毒性</label>
+                </div>
+                
+                <div class="container">
+                    <label class="question">1.3.介质毒性</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-3" value=0> 
+                        <label class="option">无毒性</label>
+        
+                        <input type="radio" name="hgdf-1-3" value=4> 
+                        <label class="option">轻度毒性</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-3" value=8> 
+                        <label class="option">中度毒性</label>
+        
+                        <input type="radio" name="hgdf-1-3" value=10> 
+                        <label class="option">高度毒性</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-1-3" value=12> 
+                        <label class="option">极度毒性</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+        
+            <button class="button" onclick="opendivs(2)">二、介质的最大泄漏量</button>
+            <form id=2 style="display: none">
+        
+                <input type="radio" name="hgdf-2"  style="display: none;" checked>
+            
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.1.计算介质泄露速度</label>
+                </div>
+        
+        
+                <div class="container">
+                    <lable class="question">2.1.1.介质的种类</lable>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-1-1" value=liquid> 
+                        <lable class="option">介质是液体</lable>
+                    
+                        <input type="radio" name="hgdf-2-1-1" value=gas> 
+                        <lable class="option">介质是气体</lable>    
+                    </div>
+                </div>
+        
+                <div id="hgdf-2-1-1-liquid" style="display: none;">
+        
+                    <div class="container">
+                        <label class="option" style="margin-left: 16%;">请输入泄漏面积(mm^2): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-liquid-input1"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入管道内介质压力(MPa): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-liquid-input2"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入液体介质的静水压(MPa): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-liquid-input3"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入介质在泄漏温度下的密度(g/cm^3): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-liquid-input4"></span></label>
+                    </div>
+        
+                </div>
+        
+                <div id="hgdf-2-1-1-gas" style="display: none;">
+        
+                    <div class="container">
+                        <label class="option" style="margin-left: 16%;">请输入泄漏面积(mm^2): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input1"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入大气压力(MPa): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input2"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入理想气体的恒压比热(J·g/K): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input3"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入理想气体的恒积比热(J·g/K): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input4"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入介质分子量(g/mol): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input6"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入管道内介质压力(MPa): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-gas-input7"></span></label>
+                        <label class="option" style="margin-left: 16%;">请输入介质温度(K): <span style="margin-left: 3vh;"><input id="hgdf-2-1-1-liquid-input8"></span></label>
+                    
+                    </div>
+        
+        
+        
+                </div>
+        
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.2.估算泄露时间</label>
+                </div>
+        
+                <script>
+                    var type0 = document.getElementsByName("hgdf-2-1-1");
+                    var wg;
+        
+                    for (var i = 0; i < type0.length; i++) {
+                        type0[i].addEventListener("click", function() {
+                            if (this.value === "liquid") {
+                                document.getElementById("hgdf-2-1-1-liquid").style.display = "block";
+                                document.getElementById("hgdf-2-1-1-gas").style.display = "none";
+        
+                                var sk = document.getElementById("hgdf-2-1-1-liquid-input1");
+                                var pp1 = document.getElementById("hgdf-2-1-1-liquid-input2");
+                                var p_ = document.getElementById("hgdf-2-1-1-liquid-input3");
+                                var rou = document.getElementById("hgdf-2-1-1-liquid-input4");
+        
+                                wg = 0.03*0.61* parseFloat(sk.value) * Math.sqrt((parseFloat(pp1.value)+parseFloat(p_.value))*parseFloat(rou.value))
+        
+                            } else {
+                                document.getElementById("hgdf-2-1-1-liquid").style.display = "none";
+                                document.getElementById("hgdf-2-1-1-gas").style.display = "block";
+        
+                                var ptrans = 0.0;
+                                var K = 0.0;
+                                var sk = document.getElementById("hgdf-2-1-1-gas-input1");
+                                var pa = document.getElementById("hgdf-2-1-1-gas-input2");
+                                var cp = document.getElementById("hgdf-2-1-1-gas-input3");
+                                var cv = document.getElementById("hgdf-2-1-1-gas-input4");
+                                var pp2 = document.getElementById("hgdf-2-1-1-gas-input7");
+                                var t = document.getElementById("hgdf-2-1-1-gas-input8");
+                                var m = document.getElementById("hgdf-2-1-1-gas-input6");
+                                K = parseFloat(cp.value)/parseFloat(cv.value);
+                                ptrans = parseFloat(pa.value)*(((K+1)/2)**(K/(K-1)));
+        
+                                if(ptrans>parseFloat(pp2.value)){
+                                    wg = 0.0056*0.85*parseFloat(sk.value)*parseFloat(pp2.value)*Math.sqrt((K/(8.314*parseFloat(t.value)))*32.2*(2*K/(K-1))*((parseFloat(pa.value)/parseFloat(pp2.value))**(K/2))*(1-(parseFloat(pa.value)/parseFloat(pp2.value))**(((K-1)/K))));
+                                }else{
+                                    wg = 0.0056*0.85*parseFloat(sk.value)*parseFloat(pp2.value)*Math.sqrt(32.2*(K*parseFloat(m.value)/(8.314*parseFloat(t.value)))*((2/(K+1))**((K+1)/(K-1))));
+                                }
+                            }
+                        });
+                    }
+                </script>
+        
+        
+        
+                <div class="container">
+                    <label class="question">2.2.1.监测系统类型</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-1" value=A> 
+                        <label class="option">监测关键参数的变化从而间接监测介质流失的专用设备</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-1" value=B> 
+                        <label class="option">直接监测介质实际流失的灵敏的探测器</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-1" value=C> 
+                        <label class="option">目测，摄像头等</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.2.切断系统类型</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-2" value=A> 
+                        <label class="option">由监测设备或探测器激活的自动切断装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-2" value=B> 
+                        <label class="option">由操作员在操作室或其他远离泄漏点的位置人为切断装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-2" value=C> 
+                        <label class="option">人工操作的切断阎</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.3.距离发生泄漏的区段最近的上下游紧急切断阀之间的介质量</label>
+                    <div class="rows">
+                        <label class="option">请输入(kg): <span style="margin-left: 3vh;"><input id="hgdf-2-2-3"></span></label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.4.消防系统</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-4" value=0.75> 
+                        <label class="option">紧急泄放系统，且装备有A级或B级切断系统</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-4" value=0.8> 
+                        <label class="option">消防水喷淋和监测系统</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-4" value=0.85> 
+                        <label class="option">泡沫喷射系统</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-4" value=0.95> 
+                        <label class="option">消防水监测系统</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.5.应急预案</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-5" value=0.8> 
+                        <label class="option">应急预案完整可靠，经常演习</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-5" value=0.9> 
+                        <label class="option">应急预案不完整，或缺乏演习</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-2-2-5" value=1> 
+                        <label class="option">无应急预案</label>
+                    </div>
+                </div>
+        
+        
+        
+        
+        
+        
+                <script>
+                    var xiaofang = document.getElementsByName('input[name="hgdf-2-2-4"]:checked').value;
+                    var yingji = document.getElementsByName('input[name="hgdf-2-2-5"]:checked').value;
+                    var input_q = document.getElementById("hgdf-2-2-3");
+                    var value_input_q = parseFloat(input_q.value);
+                    var gjxll_Q = 0;
+                    var value_sk = parseFloat(sk.value);
+                    var xlsj_t = 0;
+                    var state_sk = '';
+                
+                    if (value_sk < 15) {
+                        state_sk = 'A';
+                    } else if (value_sk >= 15 && value_sk < 500) {
+                        state_sk = 'B';
+                    } else {
+                        state_sk = 'C';
+                    }
+                
+                    var rules = {
+                        'A,A,A': 1200,
+                        'A,A,B': 600,
+                        'A,A,C': 300,
+                        'A,B,A': 1800,
+                        'A,B,B': 1800,
+                        'A,B,C': 600,
+                        'A,C,A': 2400,
+                        'A,C,B': 1800,
+                        'A,C,C': 1200,
+                        'B,A,A': 2400,
+                        'B,A,B': 1800,
+                        'B,A,C': 1200,
+                        'B,B,A': 2400,
+                        'B,B,B': 1800,
+                        'B,B,C': 1200,
+                        'B,C,A': 3600,
+                        'B,C,B': 1800,
+                        'B,C,C': 1200,
+                        'C,A,A': 3600,
+                        'C,A,B': 2400,
+                        'C,A,C': 1200,
+                        'C,B,A': 3600,
+                        'C,B,B': 2400,
+                        'C,B,C': 1200,
+                        'C,C,A': 3600,
+                        'C,C,B': 2400,
+                        'C,C,C': 1200
+                    };
+                
+                    var combination = document.querySelector('input[name="hgdf-2-2-1"]:checked').value +',' +document.querySelector('input[name="hgdf-2-2-2"]:checked').value +',' +state_sk;
+                
+                    if (combination in rules) {
+                        xlsj_t = rules[combination];
+                    }
+        
+                    gjxll_Q = Math.min(wg*xlsj_t,value_input_q);
+                    var jiance = document.querySelector('input[name="hgdf-2-2-1"]:checked').value;
+                    var qieduan = document.querySelector('input[name="hgdf-2-2-2"]:checked').value;
+                    if (jiance=='A' && qieduan=='A'){gjxll_Q=gjxll_Q*0.75;}
+                    else if (jiance=='A' && qieduan=='B'){gjxll_Q=gjxll_Q*0.8;}
+                    else if (jiance=='A' && qieduan=='C'){gjxll_Q=gjxll_Q*0.9;}
+                    else if (jiance=='B' && qieduan=='C'){gjxll_Q=gjxll_Q*0.85;}
+        
+                    gjxll_Q = gjxll_Q*parseFloat(xiaofang)*parseFloat(yingji);
+        
+                    var zuihouyige = document.getElementsByName("hgdf-2");
+        
+                    if(gjxll_Q<=450){zuihouyige.value = 1;}
+                    else if(gjxll_Q>450 && gjxll_Q<=4500){zuihouyige.value = 8;}
+                    else if(gjxll_Q>4500 && gjxll_Q<=45000){zuihouyige.value = 12;}
+                    else if(gjxll_Q>45000 && gjxll_Q<=450000){zuihouyige.value = 16;}
+                    else {zuihouyige.value = 20;}
+        
+                </script>
+            
+            </form>
+        
+        
+            <button class="button" onclick="opendivs(3)">三、介质的种类</button>
+            <form id=3 style="display: none">
+        
+                <div class="container">
+                    <lable class="question">3.1.介质的种类</lable>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-3-1" value=liquid> 
+                        <lable class="option">介质是液体</lable>
+                    
+                        <input type="radio" name="hgdf-3-1" value=gas> 
+                        <lable class="option">介质是气体</lable>
+                    </div>
+                </div>
+        
+                <div id="fsdf-3-1-liquid" style="display: none;">
+        
+                    <div class="container">
+                        <label class="question">3.2.液体介质的扩散性</label>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-1-1" value=3> 
+                            <label class="option">可能的泄漏处具有密封隔离层(渗透率为0)</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-1-1" value=6> 
+                            <label class="option">可能的泄漏处土壤为泥土、密集的硬黏土或无缝岩石(渗透率＜10^-7 cm/s) </label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-1-1" value=9> 
+                            <label class="option">能的泄漏处土壤为泥沙、淤泥、黄土、黏泥及沙石(渗透率∈[10^-7cm／s，10^-5 cm／s])</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-1-1" value=12> 
+                            <label class="option">可能的泄漏处土壤为细砂、粉砂和中等程度碎石(渗透率∈[10^-5cm／s，10^-3cm／s])，</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-1-1" value=15> 
+                            <label class="option">果可能的泄漏处土壤为砂砾、沙子和大块碎石(渗透率＞10^-3 cm／s)</label>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div id="fsdf-3-1-gas" style="display: none;">
+        
+                    <div class="container">
+                        <label class="question">3.2.1.地形</label>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-2-1" value=1> 
+                            <label class="option">可能的泄漏处地形闭塞</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-2-1" value=6> 
+                            <label class="option">可能的泄漏处地形开阔</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">3.2.2.风速</label>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-2-2" value=2> 
+                            <label class="option">可能的泄漏处年平均风速低</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-2-2" value=6> 
+                            <label class="option">可能的泄漏处年平均风速中等</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="hgdf-3-2-2-2" value=9> 
+                            <label class="option">可能的泄漏处年平均风速高</label>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+                <script>
+                    var type = document.getElementsByName("hgdf-3-1");
+                    var liquid = document.getElementsByName("hgdf-3-2-1-1");
+                    //var liquid = document.querySelectorAll("#fsdf-3-1-liquid");
+                    //var gas = document.querySelectorAll("#fsdf-3-1-gas");
+                    var gas1 = document.getElementsByName("hgdf-3-2-2-1");
+                    var gas2 = document.getElementsByName("hgdf-3-2-2-2");
+        
+                    for (var i = 0; i < type.length; i++) {
+                        type[i].addEventListener("click", function() {
+                            if (this.value === "liquid") {
+                                document.getElementById("fsdf-3-1-liquid").style.display = "block";
+                                document.getElementById("fsdf-3-1-gas").style.display = "none";
+                                for (var j = 0; j < gas1.length; j++) {
+                                    gas1[j].checked = false;
+                                }
+                                for (var k = 0; k < gas2.length; k++) {
+                                    gas2[k].checked = false;
+                                }
+                            } else {
+                                document.getElementById("fsdf-3-1-liquid").style.display = "none";
+                                document.getElementById("fsdf-3-1-gas").style.display = "block";
+                                for (var l = 0; l < liquid.length; l++) {
+                                    liquid[l].checked = false;
+                                }
+                            }
+                        });
+                    }
+                </script>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(4)">四、人口密度</button>
+            <form id=4 style="display: none">
+        
+                <div class="container">
+                    <label class="question">4.1.人口密度</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-4-1" value=0> 
+                        <label class="option">可能的泄漏处是荒芜人烟地区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-4-1" value=6> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，人口数量∈[1，100)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-4-1" value=12> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，人口数量∈[100，300)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-4-1" value=16> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，人I：J数量∈[300，500]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-4-1" value=20> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m韵范围内，人口数量>500</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(5)">五、沿线环境(财产密度)</button>
+            <form id=5 style="display: none">
+        
+                <div class="container">
+                    <label class="question">5.1.人口密度</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=0> 
+                        <label class="option">可能的泄漏处是荒芜人烟地区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=3> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，大多为农业生产区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=6> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，大多为住宅、宾馆、娱乐休闲地</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=9> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，大多为商业区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=12> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管道区段两侧各200 m的范围内，大多为仓库、码头、车站等</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-5-1" value=15> 
+                        <label class="option">可能的泄漏处2 km长度范围内，管线两侧各200 m的范围内。大多为工业生产区</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+        
+            <button class="button" onclick="opendivs(6)">六、泄漏原因</button>
+            <form id=6 style="display: none">
+        
+                <div class="container">
+                    <label class="question">6.1.泄漏原因</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-6-1" value=1> 
+                        <label class="option">最可能的泄漏原因是操作失误</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-6-1" value=5> 
+                        <label class="option">最可能的泄漏原因是焊接质量或腐蚀穿孔</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-6-1" value=8> 
+                        <label class="option">最可能的泄漏原因是第三方破坏或自然灾害</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(7)">七、供应中断对下游用户的影响</button>
+            <form id=7 style="display: none">
+        
+                <div class="container">
+                    <label class="question">7.1.抢修时间</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-1" value=1> 
+                        <label class="option">抢修时间＜1天</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-1" value=3> 
+                        <label class="option">抢修时间∈[1天，2天)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-1" value=5> 
+                        <label class="option">抢修时间∈[2天，4天)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-1" value=7> 
+                        <label class="option">抢修时间∈[4天，7天)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-1" value=9> 
+                        <label class="option">抢修时间≥7天</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">7.2.供应中断的影响范围和程度</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-2" value=3> 
+                        <label class="option">无重要用户，供应中断对其他单位影响一般</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-2" value=6> 
+                        <label class="option">供应中断影响小城市、小城镇的工业用燃料</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-2" value=9> 
+                        <label class="option">供应中断影响小企业、小城市生活</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-2" value=12> 
+                        <label class="option">供应中断影响一般的工业生产、中型城市生活</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-2" value=15> 
+                        <label class="option">供应中断影响国家重要大型企业、大型中心城市的生产、生活</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">7.3.用户对管道所输送介质的依赖性</label>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-3" value=3> 
+                        <label class="option">供应中断的影响很小</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-3" value=6> 
+                        <label class="option">有替代介质可用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-3" value=9> 
+                        <label class="option">有自备储存设施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="hgdf-7-3" value=12> 
+                        <label class="option">用户对管道所输送介质绝对依赖</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+        </div>
+        
+        
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                
+                <div class="c-footer__body">
+                    
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style">
+                    </div>
+                    
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+                </div>
+            </div>
+    </body>
+
+</html>

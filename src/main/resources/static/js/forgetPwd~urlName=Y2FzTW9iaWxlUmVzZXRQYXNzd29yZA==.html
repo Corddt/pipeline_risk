@@ -1,0 +1,102 @@
+<!doctype html><html>
+<head>
+    <meta charset="utf-8"><title>短信找回密码-中国石油大学（北京）克拉玛依校区信息门户</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"><meta content="yes" name="apple-touch-fullscreen"><meta content="telephone=no" name="format-detection"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/><link rel="stylesheet" href="../themes/sso_cupk/css/global.css"/><link rel="stylesheet" href="../themes/sso_cupk/css/verification.css"/><link rel="icon" href=" https://cup.edu.cn/images/favicon.ico"/><style>
+        /*通过手机找回密码*/
+        .retrieveTitle h3 img{ display:block; float:left; margin:2px 13px 0 0;}
+        .retrieveTitle h3 span{ display:block; float:left; line-height:35px;}
+
+        .iphoneWay li{margin-top: 5px;overflow:hidden;}
+        .iphoneWay li label{display:block;float:left;width: 30%;font-size: 18px;color:#303030;line-height: 50px;margin-top: 20px;}
+        .iphoneWay li .iphoneInput{
+            width:270px;
+            height: 50px;
+            float:left;
+            border:1px solid #dadada;
+            border-radius:3px;
+            line-height: 50px;
+            font-size:14px;
+            color:#555;
+            padding-left: 11px;
+        }
+        .iphoneWay li .codeText{ font-size:16px; color:#3d82cf; display:block; float:left; border-bottom:1px solid #3d82cf;
+            padding-bottom:3px; margin:35px 0 0 23px; text-decoration:none;}
+        .iphoneWay li .sendCaptchaText{ font-size:16px; color:#03a3dc; display:block; float:left; border-bottom:1px solid #3d82cf;
+            padding-bottom:3px; margin:8px 0 0 23px; text-decoration:none;}
+
+        .iphoneButton input{     margin: 20px auto 0;}
+        .carryButton{ background:#d9473c; color:#fff;}
+        .promptBox{
+            width:90%;
+            /* height:60px; */
+            /* background:url(../images/sydx/resetpwd/promptBg.png) repeat-x; */
+            /* border-radius:3px; */
+            margin: 0px 60px 0;
+            /* position:absolute; */
+            bottom:20px;
+        }
+        .promptBox p{ line-height:60px; text-align:center; font-size:14px; color:#777; font-weight:bold;}
+        .promptBox p b{ color:#ed4646;}
+        .field{ font-size:14px; color:#f00; padding-left:30%; display:block; margin: 10px auto 0;}
+        .field2{ padding-left:49%;}
+        .firstLoginBox{    height: 670px;}
+        /*通过手机找回密码-完成*/
+        .completBox{ margin-top:53px;}
+        .completIcons img{ display:block; margin:0 auto;}
+        .completPart{ font-size:16px; color:#303030; text-align:center; margin-top:30px;}
+        .completButton input{ background:#d9473c; width:180px; height:40px; font-size:18px; color:#fff; border-radius:36px;
+            border:none; line-height:40px; text-align:center; display:block; margin:40px auto 0; letter-spacing:1px; cursor:pointer;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="firstLoginBox">
+        <div class="retrieveTitle">
+            <h3>通过短信找回密码</span></h3>
+        </div>
+        <div class="iphoneBox">
+            <ul class="iphoneWay">
+                <li>
+                    <label>请输入平台账号</label>
+                    <input class="iphoneInput" type="text" id="J_username"></li>
+                <li>
+                    <label>请输入预留手机号</label>
+                    <input class="iphoneInput" type="text" id="J_mobile"><a class="codeText" href="javascript:void(0)" id="J_ClickSendCaptcha">获取验证码</a>
+                </li>
+                <li>
+                    <label>请输入验证码</label>
+                    <input class="iphoneInput" type="text" id="J_captcha" ></li>
+                <li>
+                    <label>请输入新密码</label>
+                    <input class="iphoneInput" type="password" id="newPwd" ></li>
+                <li>
+                    <label>请再次输入新密码</label>
+                    <input class="iphoneInput" type="password" id="newPwd2" ></li>
+                <span class="field" id="errMsg"></span>
+            </ul>
+            <div class="iphoneButton">
+                <input class="returnButton" type="button" value="确定"></div>
+        </div>
+        <div class="promptBox">
+            <p>提醒：如果无法通过上述方法找回密码，请您和科技与信息部（电话：0990-6633082）联系。</p>
+        </div>
+    </div>
+    <div class="footerBox">
+        <div class="footer">
+            <p>中国石油大学(北京)克拉玛依校区 ICP备案: 京ICP备09080943号-7 Copyright @ 2023</p>
+        </div>
+    </div>
+</div>
+<script src="../themes/common/jquery-3.7.1.min.js"></script>
+<script src="../themes/common/jquery.cookie.js"></script>
+<script src="../themes/sso_cupk/js/casForgetPwd.js"></script>
+<script src="../themes/sso_cupk/js/Base64Utils.js"></script>
+<script src="../themes/sso_cupk/js/flexible.js"></script>
+<script>
+    $('.completButton').click(function(){
+        window.location.href = "../"
+    })
+</script>
+</body>
+</html>
+

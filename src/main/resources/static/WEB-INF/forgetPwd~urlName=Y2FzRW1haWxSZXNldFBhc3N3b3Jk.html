@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>邮箱找回密码-中国石油大学（北京）克拉玛依校区信息门户</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" href="../themes/sso_cupk/css/global.css" />
+    <link rel="stylesheet" href="../themes/sso_cupk/css/verification.css" />
+    <link rel="icon" href=" https://cup.edu.cn/images/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="firstLoginBox">
+            <div class="retrieveTitle">
+                <h3>通过邮箱找回密码</span></h3> </div>
+            <div class="iphoneBox">
+                <ul class="iphoneWay mailWay">
+                    <li>
+                        <label>请输入平台账号（工号或学号）</label>
+                        <input class="iphoneInput" type="text" placeholder="请输入" id="username" onfocus="this.placeholder=''" onblur="this.placeholder='请输入'">
+                    </li>
+                    <li> <span class="field" id="errMsg" style="padding-left: 15%;">请输入平台账号,平台账号为必填项</span> </li>
+                </ul>
+                <div class="iphoneButton">
+                    <!-- <input class="returnButton" type="button" value="返回"> -->
+                    <input class="carryButton" type="button" value="继续" id="J_emailNext" data-id="casEmailResetPasswordSend">
+                </div>
+            </div>
+            <div class="completBox" style="display: none">
+                <div class="completIcons"> <img src="../themes/sso_cupk/images/email_er.png" style="width: 150px;">
+                </div>
+                <p class="completPart">取回密码的方法已通过EMAll 发送到您的默认邮箱：<em id="myEmail"></em>中，手机微信扫码关注“中石大克拉玛依校区”，进入邮件系统即可查询密码重置的邮件信息</p>
+                <div class="completButton">
+                    <input type="button" value="返回登录页面" o>
+                </div>
+            </div>
+            <div class="promptBox">
+                <p>提醒：如果无法通过上述方法找回密码，请您和科技与信息部（电话：0990-6633082）联系。</p>
+            </div>
+        </div>
+        <div class="footerBox">
+            <div class="footer">
+                <p>中国石油大学(北京)克拉玛依校区 ICP备案: 京ICP备09080943号-7 Copyright @ 2023</p>
+            </div>
+        </div>
+    </div>
+    <script src="../themes/common/jquery-3.7.1.min.js"></script>
+    <script src="../themes/common/jquery.cookie.js"></script>
+    <script src="../themes/sso_cupk/js/casForgetPwd.js"></script>
+    <script src="../themes/sso_cupk/js/Base64Utils.js"></script>
+    <script src="../themes/sso_cupk/js/flexible.js"></script>
+    <script>
+    $('.completButton').click(function()
+    {
+        window.location.href = "../"
+    })
+    </script>
+</body>
+
+</html>

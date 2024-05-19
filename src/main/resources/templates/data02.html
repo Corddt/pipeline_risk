@@ -1,0 +1,227 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+        function test_risk_input(a){
+            var text=document.getElementById(a);
+            var div = document.getElementById("error_risk_input");
+            
+            if(text.value=="")div.style.display="block";
+            else div.style.display="none";
+        }
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+                <div class="c-main__left">
+                    <!-- 二级页面左侧导航栏-->
+                </div>
+                <div class="c-main__right">
+                    <div class="c-right-detail">
+                        <div class="c-right-detail__header">
+                            <div class="c-right-detail__title">
+                                <div class="c-right-detail__title-name">
+                                    风险评估
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-right-detail__sub-title">
+                            <div class="c-vertical-line-title">
+                            </div>
+                        </div>
+                        <label>确定风险因素权重：</label>
+                        <input type="text" id="risk_vector_weight" style="width: 60%;" placeholder="请在此输入...">
+                        <center>
+                        <button class="btn" id="start" style="width:40%;" onclick="test_risk_input('risk_vector_weight');">开始运行</button>
+                        <button class="btn" id="stop" style="width:40%">停止运行</button>
+                        </center>
+                        <div id="error_risk_input" style="display: none;">
+                            <a style="color: red;">输入框不能为空！</a>
+                        </div>
+                    	<div style="border:3px solid rgb(192, 192, 192);width:100%;height: 100%;background-color:white;">
+                            此处显示结果
+                            <!--待输入相关内容代码-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                <div class="c-footer__body">
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style" src="../static/images/main-border.png"
+                        />
+                    </div>
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+    </body>
+
+</html>

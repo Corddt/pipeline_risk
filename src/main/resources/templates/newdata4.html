@@ -1,0 +1,1880 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+
+
+        <style>
+            p{
+              font-size: 350%;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              text-align: center;
+              margin-top: 4vh;
+              
+            }
+      
+            .container {
+                display: flex;
+                background-color:rgb(198, 255, 255);
+                box-shadow: 10px 5px 5px lightgrey; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: -30%;
+                margin-right: 30%;
+                width:140vh;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 50px 0;
+                border-radius: 10px;
+                
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-bottom: 5%;
+                margin-top: 5%;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 3vh;
+            }
+
+            .button {
+                background-color: rgb(198, 255, 255); 
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 10px 10px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(198, 255, 255); 
+                color: black; 
+                border: 2px solid #008997;
+                height: 6%;
+                width: 80%;
+            }
+
+            .button:hover {
+                background-color: #008997;
+                color: white;
+            }
+
+            .button:active {
+                background-color: #0367a6;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '»';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .text {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+    
+            .rows{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%;
+                margin-left: 15%;
+                margin-right: 15%;
+                align-items: center;
+                gap: 1vh;
+            }
+            .question {
+                position: relative;
+                font-weight: bold;
+                font-size: 140%;
+                margin-left: 15%;
+                word-wrap: break-word; /* 允许在单词内部换行 */
+                overflow-wrap: break-word; /* 与 word-wrap 作用相同，是较新的属性名 */
+            }
+            .option{
+                font-size-adjust: 1;
+                font-weight: bold;
+                font-size: 2vh;
+                flex-grow: 1;
+                
+            }
+            .back_button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+      
+          </style>
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function openPage(x) {
+              window.open(x, "_self");
+        }
+
+        function opendivs(x) {
+          var div = document.getElementById(x);
+          if (div.style.display === "none") {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+            </div>
+        </div>
+        <div class="container2">
+            <button class="button" onclick="opendivs(1)">一、设计施工控制</button>
+            <form id=1 style="display: none">
+           
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.1.设计控制</label>
+                </div>
+                
+                <div class="container">
+                    <label class="question">1.1.1.设计单位和人员的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-1" value=0> 
+                        <label class="option">设计单位或人员不具备与管道类别相应的设计资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-1" value=1> 
+                        <label class="option">设计单位和人员具备与管道类别相应的设计资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.1.2.设计标准规范</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-2" value=0> 
+                        <label class="option">未按标准规范设计或采用当时已经作废的设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-2" value=0.5> 
+                        <label class="option">采用当时有效的旧版本管道设计标准规范</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-2" value=1> 
+                        <label class="option">采用现行标准规范</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.1.3.设计文件审批</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-3" value=0> 
+                        <label class="option">设计文件未经过审批</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-3" value=1> 
+                        <label class="option">设计文件经过专人严格审批</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.1.4.危险识别</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-4" value=0> 
+                        <label class="option">没有事先制订设计方案，未进行危险识别分析</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-4" value=1> 
+                        <label class="option">设计方案不严密，由无资质的单位和人员进行危险识别分析</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-1-4" value=2> 
+                        <label class="option">完全按设计规范制定设计方案，进行了严格的危险识别分析</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.2.管道元件控制</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.1.管道元件制造单位的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-1" value=0> 
+                        <label class="option">管道元件制造单位不具备制造资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-1" value=1> 
+                        <label class="option">管道元件制造单位具备制造资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.2.管道元件质量证明文件</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-2" value=0> 
+                        <label class="option">无管道元件质量证明文件</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-2" value=1> 
+                        <label class="option">管道元件质量证明文件齐全</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.3.管道元件进货检验</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-3" value=0> 
+                        <label class="option">未进行进货检验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-3" value=0> 
+                        <label class="option">进货检验不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-3" value=1> 
+                        <label class="option">进货检验合格</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.4.管道元件储存与搬运</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-4" value=0> 
+                        <label class="option">储存与搬运过程中管道元件受到严重的损坏，影响其安全性能</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-4" value=0.5> 
+                        <label class="option">储存与搬运过程中管道元件受到一定程度的损坏，但不影响其安全性能</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-2-4" value=1> 
+                        <label class="option">储存与搬运过程中管道元件无损坏</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.3.安装及验收</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.1.安装单位资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-1" value=0> 
+                        <label class="option">安装单位不具备与管道类别相应的安装资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-1" value=0.5> 
+                        <label class="option">安装单位具备与管道类别相应的安装资质，但经验不足</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-1" value=1> 
+                        <label class="option">安装单位具备与管道类别相应的安装资质，经验丰富</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.2.项目管理</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-2" value=0> 
+                        <label class="option">未实现严格的项目管理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-2" value=1> 
+                        <label class="option">实现严格的项目管理</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.3.施工指导</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-3" value=0> 
+                        <label class="option">未由经验丰富的设计代表现场指导施工</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-3" value=1> 
+                        <label class="option">由经验丰富的设计代表现场指导施工</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.4.例会</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-4" value=0> 
+                        <label class="option">未做到每天召开例会、及时发现施工中的问题并立即处理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-4" value=1> 
+                        <label class="option">每天召开例会、及时发现施工中的问题并立即处理</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.5.施工质量控制</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-5" value=0> 
+                        <label class="option">未在施工过程中实行严格的质量控制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-5" value=1> 
+                        <label class="option">在施工过程中实行严格的质量控制</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.6.管道元件预处理</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-6" value=0> 
+                        <label class="option">管道元件表面有可见的油渍和污垢，或者有附着不牢的氧化皮、铁锈和涂料涂层等附着物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-6" value=0.5> 
+                        <label class="option">管道元件表面无可见的油渍和污垢，并且没有附着不牢的氧化皮、铁锈和涂料涂层等附着物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-6" value=1> 
+                        <label class="option">管道元件表面无可见的油渍、污垢、氧化皮、铁锈和涂料涂层等附着物，表面显示均匀金属光泽</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.7.材料误用、混用状况</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-7" value=0> 
+                        <label class="option">存在材料误用、混用</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-7" value=1> 
+                        <label class="option">不存在材料误用、混用</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.8.开槽控制</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-8" value=0> 
+                        <label class="option">未进行开槽控制</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-8" value=0> 
+                        <label class="option">开槽不满足相应标准规范的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-8" value=1> 
+                        <label class="option">开槽满足相应标准规范的要求</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.9.焊接操作人员资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-9" value=0> 
+                        <label class="option">焊接操作人员无相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-9" value=1> 
+                        <label class="option">焊接操作人员有相应的资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.10.焊接工艺程序及焊接工艺评定记录</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-10" value=0> 
+                        <label class="option">没有焊接工艺程序及焊接工艺评定记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-10" value=1> 
+                        <label class="option">有焊接工艺程序，但无相应的焊接工艺评定记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-10" value=1> 
+                        <label class="option">焊接工艺程序和焊接工艺评定记录齐全</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.11.焊接检测</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-11" value=0> 
+                        <label class="option">检测单位或人员不具备检测资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-11" value=0> 
+                        <label class="option">检测单位或人员具备检测资质，但未按照JB／T 4730进行检测</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-11" value=1> 
+                        <label class="option">检测单位或人员具备检测资质，并且严格按照JB／T 4730进行检测</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.12.焊接质量</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-12" value="S=100"> 
+                        <label class="option">焊缝含有不能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-12" value=1.5> 
+                        <label class="option">焊缝含有能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-12" value=3> 
+                        <label class="option">焊缝不含缺陷</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.13.回填控制</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-13" value=0> 
+                        <label class="option">回填工艺或回填土质量、厚度不满足相应标准规范的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-13" value=1> 
+                        <label class="option">回填工艺和回填土质量、厚度均满足相应标准规范的要求</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.14.强度试验</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-14" value=0> 
+                        <label class="option">未进行强度试验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-14" value=0> 
+                        <label class="option">强度试验不符合相关标准规范的规定</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-14" value="none"> 
+                        <label class="option" >进行了符合相关标准规范的规定的强度试验</label>
+                    </div>
+        
+                    <div id="bzaqdf-1-3-14-1" style="display: none;margin-left: 10%;margin-right: 10%;">
+                        <div class="rows">
+                            <label class="option">请输入从上次强度试验到所进行的风险评估的年数：</label>
+                            <label class="option" id="bzaqdf-1-3-14-1-1-label"></label>
+                        </div>
+                        <div class="rows">
+                            <label class="option">请输入管道强度试验压力(MPa):</label>
+                            <label class="option" id="bzaqdf-1-3-14-1-2-label"></label>
+                        </div>
+                        <div class="rows">
+                            <label class="option">请输入管道最高工作压力(MPa):</label>
+                            <label class="option" id="bzaqdf-1-3-14-1-3-label"></label>
+                        </div>
+                    </div>
+                </div>
+        
+                <style>
+                    #bzaqdf-1-3-14-1-1-input {
+                        width: 12vh;
+                        height: 2vh;
+                        margin-left: -5vh;
+                    }
+        
+                    #bzaqdf-1-3-14-1-2-input {
+                        width: 12vh;
+                        height: 2vh;
+                        margin-left: -5vh;
+                    }
+        
+                    #bzaqdf-1-3-14-1-3-input {
+                        width: 12vh;
+                        height: 2vh;
+                        margin-left: -5vh;
+                    }
+                </style>
+        
+                <script>
+                    var checkbox = document.querySelector('input[name="bzaqdf-1-3-14"]');
+                    var label = document.getElementById('bzaqdf-1-3-14-1-1-label');
+                    var label2 = document.getElementById('bzaqdf-1-3-14-1-2-label');
+                    var label3 = document.getElementById('bzaqdf-1-3-14-1-3-label');
+                
+                    var input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'bzaqdf-1-3-14-1-1-input';
+        
+                    var input2 = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'bzaqdf-1-3-14-1-2-input';
+        
+                    var input3 = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'bzaqdf-1-3-14-1-3-input';
+                
+                    input.addEventListener('input', function() {
+                        var y = parseFloat(input.value);
+                        var ans=0;
+                        if(y>10){
+                            y=10;
+                        }
+        
+                        var p2=parseFloat(input2.value);
+                        var pmax2=parseFloat(input3.value);
+        
+                        var val=3-1.8*(3-2*(p2/pmax2))-0.12*y;
+                        if(val<0){
+                            ans=0;
+                        }
+                        else if(val>3){
+                            ans=3;
+                        }
+                        else{
+                            ans=val;
+                        }
+                        checkbox.value = ans;
+                    });
+                
+                    label.insertAdjacentElement('beforeend', input);
+                    label2.insertAdjacentElement('beforeend', input2);
+                    label3.insertAdjacentElement('beforeend', input3);
+                </script>
+                <script>
+                    var dsfph_ms_1_1Radios = document.getElementsByName("bzaqdf-1-3-14");
+                    var cc = document.querySelector('input[id="bzaqdf-1-3-14-1-1-input"]');
+                    var dd = document.querySelector('input[id="bzaqdf-1-3-14-1-2-input"]');
+                    var ee = document.querySelector('input[id="bzaqdf-1-3-14-1-3-input"]');
+        
+                    for (var i = 0; i < dsfph_ms_1_1Radios.length; i++) {
+                        dsfph_ms_1_1Radios[i].addEventListener("click", function() {
+                            if (this.value === "none") {
+                                document.getElementById("bzaqdf-1-3-14-1").style.display = "block";
+                            } else {
+                                document.getElementById("bzaqdf-1-3-14-1").style.display = "none";
+                                cc.value='';
+                                dd.value='';
+                                ee.value='';
+                            }
+                        });
+                    }
+                </script>
+        
+        
+        
+        
+                <div class="container">
+                    <label class="question">1.3.15.严密性试验</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-15" value=0> 
+                        <label class="option">未进行严密性试验</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-15" value=0> 
+                        <label class="option">严密性试验不符合相关标准规范的规定</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-15" value=1> 
+                        <label class="option">严密性试验符合相关标准规范的规定</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.16.清管和干燥</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-16" value=0> 
+                        <label class="option">未清管和(或)干燥</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-16" value=0> 
+                        <label class="option">清管和(或)干燥不满足与管道类别相应的标准规范的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-16" value=1> 
+                        <label class="option">清管和(或)干燥基本满足与管道类别相应的标准规范的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-16" value=2> 
+                        <label class="option">清管和(或)干燥满足与管道类别相应的标准规范的要求</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-16" value=2> 
+                        <label class="option">不需要清管和(或)干燥</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.17.施工单位自验收</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-17" value=0> 
+                        <label class="option">未进行施工单位自验收</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-17" value=0> 
+                        <label class="option">施工单位自验收不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-17" value=1> 
+                        <label class="option">施工单位自验收合格</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.18.业务组织专家验收</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-18" value=0> 
+                        <label class="option">未进行业务组织专家验收</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-18" value=0> 
+                        <label class="option">业务组织专家验收不合格</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-3-18" value=1> 
+                        <label class="option">业务组织专家验收合格</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.4.附加安全裕度</label>
+                </div>
+        
+                <style>
+                    #bzaqdf-1-4-1-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+        
+                    #bzaqdf-1-4-2-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+        
+                    #bzaqdf-1-4-3-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+                </style>
+        
+                <input type="radio" name="bzaqdf-1-4" style="display: none;"> 
+                <script>
+                    var radioButton = document.querySelector('input[type="radio"][name="bzaqdf-1-4"]');
+                    radioButton.checked = true;
+                </script>
+        
+                <div class="container">
+                    <div class="rows">
+                        <label class="option">请输入管道实测最小壁厚(mm):</label><input id="bzaqdf-1-4-1-input">
+                    </div>
+                    <div class="rows">
+                        <label class="option">请输入管道所需要的最小壁厚(mm)设计计算值(如果相应规范规定采用计算的方式确定壁厚):</label><input id="bzaqdf-1-4-2-input">
+                    </div>
+                    <div class="rows">
+                        <label class="option">请输入管道所需要的最小壁厚(mm)相应设计规范要求的最小值(如果相应规范给出最小值):</label><input id="bzaqdf-1-4-3-input">
+                    </div>
+                </div>
+        
+                <script>
+                    var inputElement1 = document.getElementById('bzaqdf-1-4-1-input');
+                    var inputElement2 = document.getElementById('bzaqdf-1-4-2-input');
+                    var inputElement3 = document.getElementById('bzaqdf-1-4-3-input');
+        
+                    var t3 = parseFloat(inputElement1.value);
+                    var a = parseFloat(inputElement2.value);
+                    var b = parseFloat(inputElement3.value);
+        
+                    var t1 = Math.max(a, b);
+        
+                    var res;
+                    if (2.5 * ((t3 / t1) - 1) > 2) {
+                    res = 2;
+                    } else if (2.5 * ((t3 / t1) - 1) < 0) {
+                    res = "S=100";
+                    } else {
+                    res = 2.5 * ((t3 / t1) - 1);
+                    }
+        
+                    var radioButton2 = document.querySelector('input[type="radio"][name="bzaqdf-1-4"]');
+                    radioButton2.value = res;
+                </script>
+        
+                <script>
+                    var inputElement1 = document.getElementById('bzaqdf-1-4-1-input');
+                    var inputElement2 = document.getElementById('bzaqdf-1-4-2-input');
+                    var inputElement3 = document.getElementById('bzaqdf-1-4-3-input');
+        
+                    inputElement1.addEventListener('input', function() {
+                    if (isNaN(inputElement1.value)) {
+                        inputElement1.value = '';
+                    }
+                    });
+        
+                    inputElement2.addEventListener('input', function() {
+                    if (isNaN(inputElement2.value)) {
+                        inputElement2.value = '';
+                    }
+                    });
+        
+                    inputElement3.addEventListener('input', function() {
+                    if (isNaN(inputElement3.value)) {
+                        inputElement3.value = '';
+                    }
+                    });
+        
+                </script>
+        
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.5.安全保护措施</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.1.翻越点后低洼段、泵站出站段的安全保护装置</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-1" value=0> 
+                        <label class="option">无安全保护装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-1" value=0.5> 
+                        <label class="option">设有安全保护装置，但设备选型不合理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-1" value=1> 
+                        <label class="option">设有安全保护装置，并且设备选型合理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-1" value=1> 
+                        <label class="option">是非翻越点后低洼段、泵站出站段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.2.穿越公路的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-2" value=0> 
+                        <label class="option">未加厚管壁或采用其他安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-2" value=1> 
+                        <label class="option">采取加厚管壁或采用其他有效的安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-2" value=1> 
+                        <label class="option">是非穿越公路的区段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.3.穿越河流的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-3" value=0> 
+                        <label class="option">未加设防震措施或采用其他安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-3" value=1> 
+                        <label class="option">加设防震措施或采用其他有效的安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-3" value=1> 
+                        <label class="option">是非穿越河流的区段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.4.翻越点后低洼段、泵站出站段的安全保护装置</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-4" value=0> 
+                        <label class="option">无安全保护装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-4" value=0.5> 
+                        <label class="option">设有安全保护装置，但设备选型不合理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-4" value=1> 
+                        <label class="option">设有安全保护装置，并且设备选型合理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-4" value=1> 
+                        <label class="option">是非翻越点后低洼段、泵站出站段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.5.穿越公路的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-5" value=0> 
+                        <label class="option">未加厚管壁或采用其他安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-5" value=1> 
+                        <label class="option">采取加厚管壁或采用其他有效的安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-5" value=1> 
+                        <label class="option">是非穿越公路的区段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.6.穿越河流的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-6" value=0> 
+                        <label class="option">未加设防震措施或采用其他安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-6" value=1> 
+                        <label class="option">加设防震措施或采用其他有效的安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-6" value=1> 
+                        <label class="option">是非穿越河流的区段</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.7.防止水击的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-7" value=0> 
+                        <label class="option">无防止水击的安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-7" value=0.5> 
+                        <label class="option">设置了缓冲罐或慢速关闭装置</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-7" value=1> 
+                        <label class="option">设置了缓冲罐和慢速关闭装置等安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-7" value=1> 
+                        <label class="option">根据流体密度和弹性模数，发生水击的可能性很小，不需要防止水击的安全保护措施</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.8.大落差段的安全保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-8" value=0> 
+                        <label class="option">未采用变径管或其他安全保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-5-8" value=1> 
+                        <label class="option">采用变径管或其他有效的安全保护措施</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.6.监检</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.6.1.监检单位及人员的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-1" value=0> 
+                        <label class="option">管道安装时未进行监检</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-1" value=0> 
+                        <label class="option">管道监检单位或人员不具备监检资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-1" value=1> 
+                        <label class="option">管道监检单位和人员具备监检资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.6.2.监检工作执行情况</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-2" value=0> 
+                        <label class="option">管道安装时未进行监检</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-2" value=0> 
+                        <label class="option">监检工作未按照监检大纲(或计划)进行</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-2" value=1> 
+                        <label class="option">监检工作严格按照监检大纲(或计划)进行</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.6.3.监检结论</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-3" value=0> 
+                        <label class="option">管道安装时未进行监检</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-3" value=0> 
+                        <label class="option">无监检报告</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-3" value=0> 
+                        <label class="option">监检结论为“不合格”</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-6-3" value=1> 
+                        <label class="option">监检结论为“合格”</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.7.监理</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.7.1.监理单位及人员的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-1" value=0> 
+                        <label class="option">管道安装时未进行监理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-1" value=0> 
+                        <label class="option">管道监理单位或人员不具备监理资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-1" value=1> 
+                        <label class="option">管道监理单位和人员具备监理资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.7.2.监理工作执行情况</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-2" value=0> 
+                        <label class="option">管道安装时未进行监理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-2" value=0> 
+                        <label class="option">监理工作未按照监理大纲(或计划)进行</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-2" value=1> 
+                        <label class="option">监理工作严格按照监理大纲(或计划)进行</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.7.3.监理结论</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-3" value=0> 
+                        <label class="option">管道安装时未进行监理</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-3" value=0> 
+                        <label class="option">无监理报告</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-3" value=0> 
+                        <label class="option">监理结论为“不合格”</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-7-3" value=1> 
+                        <label class="option">监理结论为“合格”</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">1.8.记录和图纸</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.8.1.材料使用记录</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-1" value=0> 
+                        <label class="option">无材料使用记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-1" value=0.5> 
+                        <label class="option">材料使用记录不完整</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-1" value=1> 
+                        <label class="option">有完整、详细的材料使用记录</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.8.2.施工检验记录</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=0> 
+                        <label class="option">无任何检验记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=0.5> 
+                        <label class="option">无修补记录，其他记录完整</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=1> 
+                        <label class="option">检验记录不连续</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=1.5> 
+                        <label class="option">只有焊口探伤检验记录，无其他记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=1.8> 
+                        <label class="option">重要施工环节有检验记录，其他环节无检验记录</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-2" value=2> 
+                        <label class="option">施工全过程均有完整的检验记录</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.8.3.图纸</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-3" value=0> 
+                        <label class="option">无图纸</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-3" value=0.5> 
+                        <label class="option">图纸不齐全</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-1-8-3" value=1> 
+                        <label class="option">图纸齐全</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(2)">二、检测及评价</button>
+            <form id=2 style="display: none">
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.1.输气管道和集气管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.1.管道使用年数</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-1" value=0> 
+                        <label class="option">管道使用年数≤5年或管道使用年数≥25年</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-1" value=5> 
+                        <label class="option">管道使用年数∈(5年，25年)</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.2.泄漏检测</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-2" value=0> 
+                        <label class="option">未进行泄漏检测</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-2" value=1> 
+                        <label class="option">泄漏检测周期过长，不满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-2" value=2> 
+                        <label class="option">泄漏检测周期基本满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-2" value=4> 
+                        <label class="option">泄漏检测周期满足实际需要</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.3.管体缺陷检验单位及人员的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-3" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-3" value=0> 
+                        <label class="option">检验单位或人员无相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-3" value=4> 
+                        <label class="option">检验单位和人员具备相应资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.4.管体缺陷检验及评价周期</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-4" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-4" value=1> 
+                        <label class="option">管体缺陷检验及评价周期过长，不满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-4" value=2> 
+                        <label class="option">管体缺陷检验及评价周期基本满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-4" value=5> 
+                        <label class="option">管体缺陷检验及评价周期满足实际需要</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.1.5.管体缺陷检验及评价结果</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-5" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-5" value="S=100"> 
+                        <label class="option">管体含有不能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-5" value=10> 
+                        <label class="option">管体含有能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-1-5" value=15> 
+                        <label class="option">管体不含缺陷</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">2.2.输油管道和集油管道</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.1.管道使用年数</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-1" value=0> 
+                        <label class="option">管道使用年数≤5年或管道使用年数≥25年</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-1" value=5> 
+                        <label class="option">管道使用年数∈(5年，25年)</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.2.泄漏检测</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-2" value=0> 
+                        <label class="option">未进行泄漏检测</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-2" value=1> 
+                        <label class="option">泄漏检测周期过长，不满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-2" value=2> 
+                        <label class="option">泄漏检测周期基本满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-2" value=4> 
+                        <label class="option">泄漏检测周期满足实际需要</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.3.管体缺陷检验单位及人员的资质</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-3" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-3" value=0> 
+                        <label class="option">检验单位或人员无相应资质</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-3" value=3> 
+                        <label class="option">检验单位和人员具备相应资质</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.4.管体缺陷检验及评价周期</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-4" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-4" value=1> 
+                        <label class="option">管体缺陷检验及评价周期过长，不满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-4" value=2> 
+                        <label class="option">管体缺陷检验及评价周期基本满足实际需要</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-4" value=4> 
+                        <label class="option">管体缺陷检验及评价周期满足实际需要</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.2.5.管体缺陷检验及评价结果</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-5" value=0> 
+                        <label class="option">未进行管体缺陷检验及评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-5" value="S=100"> 
+                        <label class="option">管体含有不能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-5" value=10> 
+                        <label class="option">管体含有能通过按照GB／T 19624进行的安全评定的缺陷</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-2-2-5" value=15> 
+                        <label class="option">管体不含缺陷</label>
+                    </div>
+                </div>
+        
+            </form>
+        
+            <button class="button" onclick="opendivs(3)">三、自然灾害及其防范措施</button>
+            <form id=3 style="display: none">
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.1.风载荷及其防范</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.1.风载荷及其防范</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=0> 
+                        <label class="option">是跨越段，跨距／外径＞200，且历史最大风力大于等于设计时考虑的风力</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=0.5> 
+                        <label class="option">是跨越段，跨距／外径∈(100，200]，且历史最大风力大于等于设计时考虑的风力</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=0.8> 
+                        <label class="option">是跨越段，跨距／外径∈[30，100]，且历史最大风力大于等于设计时考虑的风力</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=1> 
+                        <label class="option">是跨越段，跨距／外径＜30，且历史最大风力大于等于设计时考虑的风力</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=1> 
+                        <label class="option">是跨越段，但历史最大风力小于设计时考虑的风力</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-1" value=1> 
+                        <label class="option">是非跨越段</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.2.雪载荷及其防范</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.2.雪载荷及其防范</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=0> 
+                        <label class="option">是跨越段，跨距／外径＞200，且历史最大降雪量大于等于设计时考虑的降雪量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=0.5> 
+                        <label class="option">是跨越段，跨距／外径∈(100，200]，且历史最大降雪量大于等于设计时考虑的降雪量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=0.8> 
+                        <label class="option">是跨越段，跨距／外径∈[30，lOO]，且历史最大降雪量大于等于设计时考虑的降雪量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=1> 
+                        <label class="option">是跨越段，跨距／外径＜30，且历史最大降雪量大于等于设计时考虑的降雪量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=1> 
+                        <label class="option">是跨越段，但历史最大降雪量小于设计时考虑的降雪量</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-2" value=1> 
+                        <label class="option">是非跨越段</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.3.滑坡、泥石流及其防范</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.3.1.年降雨量</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-1" value=0> 
+                        <label class="option">年降雨量＞1270 mm</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-1" value=0.5> 
+                        <label class="option">年降雨量∈[305 mm，l270 mm]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-1" value=1> 
+                        <label class="option">年降雨量＜305 mm</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.3.2.斜坡及穿越</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-2" value=0> 
+                        <label class="option">管道区段所在处的斜坡度数＞30°</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-2" value=0> 
+                        <label class="option">管道区段穿越铁路或有10吨以上大卡车经过的公路</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-2" value=0.5> 
+                        <label class="option">管道区段所在处的斜坡度数∈[10°，30°]</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-2" value=0.5> 
+                        <label class="option">管道区段穿越有10吨以下车辆经过的公路</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-2" value=1> 
+                        <label class="option">管道区段所在处的斜坡度数＜10°并且管道区段不穿越公路或铁路</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.3.3.排水设施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-3" value=0> 
+                        <label class="option">无排水沟，或者在管道区段附近形成积水池，水流直接冲击管道</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-3" value=0.5> 
+                        <label class="option">有排水沟，但是不清理，常堵塞，可能形成水流冲击管道</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-3" value=1> 
+                        <label class="option">有排水沟，并且排水沟定期清理疏通，设置合理，不可能形成水流冲击管道</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.3.4.滑坡及泥石流预防措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-4" value=0> 
+                        <label class="option">未对滑坡及泥石流地质条件做评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-4" value=0> 
+                        <label class="option">在明显滑坡及泥石流地段未设计堡坎</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-4" value=0.5> 
+                        <label class="option">堡坎的设计强度不足</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-4" value=1> 
+                        <label class="option">在明显滑坡及泥石流地段设计有足够强度的堡坎</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-3-4" value=2> 
+                        <label class="option">在所有可能滑坡及泥石流地段均设计有足够强度的堡坎</label>
+                    </div>
+                </div>
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.4.地震及其防范</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.4.1.地震断裂带</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-1" value=0> 
+                        <label class="option">未对地震地质条件做评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-1" value=0> 
+                        <label class="option">管道区段位于地震断裂带</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-1" value=2> 
+                        <label class="option">管道区段不位于地震断裂带</label>
+                    </div>
+                </div>   
+        
+                <div class="container">
+                    <label class="question">3.4.2.防震措施</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-2" value=0> 
+                        <label class="option">未对地震基本烈度评价</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-2" value=0> 
+                        <label class="option">地震烈度不小于相关标准、规范所规定的地震基本烈度，并且未采取防震措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-2" value=1> 
+                        <label class="option">设防烈度小于地震基本烈度</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-2" value=3> 
+                        <label class="option">设防烈度大于地震基本烈度</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-4-2" value=4> 
+                        <label class="option">不需要防震</label>
+                    </div>
+                </div> 
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.5.抵抗洪水能力</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.5.抵抗洪水能力</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-5" value=0> 
+                        <label class="option">未考虑抵御洪水</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-5" value=0.5> 
+                        <label class="option">能抵御20年一遇洪水</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-5" value=0.8> 
+                        <label class="option">能抵御50年一遇洪水</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-5" value=1> 
+                        <label class="option">能抵御100年或更长时间一遇洪水</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-5" value=1> 
+                        <label class="option">不需要考虑抵御洪水</label>
+                    </div>
+                </div> 
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.6.土壤移动</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.6.1.土壤类型</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-6-1" value=0.5> 
+                        <label class="option">管道区段所在处土壤是黄土、淤泥土、沙土、黏性土、粉质黏土等</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-6-1" value=1> 
+                        <label class="option">管道区段所在处土壤是沙岩、泥岩、风化岩壁</label>
+                    </div>
+                </div> 
+        
+                <div class="container">
+                    <label class="question">3.6.2.地基土沉降监测</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-6-2" value=0> 
+                        <label class="option">不监测</label>
+        
+                        <input type="radio" name="bzaqdf-3-6-2" value=1> 
+                        <label class="option">至少每年监测一次</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-6-2" value=2> 
+                        <label class="option">连续监测</label>
+        
+                        <input type="radio" name="bzaqdf-3-6-2" value=2> 
+                        <label class="option">不需要监测</label>
+                    </div>
+                </div> 
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.7.其他地质稳定性</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.7.其他地质稳定性</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-7" value=0> 
+                        <label class="option">管道区段处容易发生崩塌</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-7" value=0.5> 
+                        <label class="option">管道区段处曾经发生沉降或者位于采矿区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-7" value=0.8> 
+                        <label class="option">管道区段位于斜坡段、活断层、液化区等，地质不稳定</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-7" value=1> 
+                        <label class="option">管道区段处地质稳定</label>
+                    </div>
+                </div> 
+        
+                <div class="container" style="background-color: #a8e16f;">
+                    <label class="question">3.8.自然灾害区域的监测</label>
+                </div>
+        
+                <div class="container">
+                    <label class="question">3.8.自然灾害区域的监测</label>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-8" value=0> 
+                        <label class="option">不监测</label>
+        
+                        <input type="radio" name="bzaqdf-3-8" value=0.2> 
+                        <label class="option">监测周期≥1年</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-8" value=0.5> 
+                        <label class="option">监测周期∈[半年，1年)</label>
+        
+                        <input type="radio" name="bzaqdf-3-8" value=0.8> 
+                        <label class="option">监测周期∈[1周，半年)</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="bzaqdf-3-8" value=1> 
+                        <label class="option">监测周期＜1周</label>
+        
+                        <input type="radio" name="bzaqdf-3-8" value=1> 
+                        <label class="option">不需要监测</label>
+                    </div>
+                </div> 
+            </form>
+        
+            <button class="button" onclick="opendivs(4)">四、其他评价项</button>
+            <form id=4 style="display: none">
+        
+                <style>
+                    #bzaqdf-4-1-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+        
+                    #bzaqdf-4-2-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+        
+                    #bzaqdf-4-3-input {
+                        width: 12vh;
+                        height: 2vh;
+                        
+                    }
+                </style>
+        
+                <input type="radio" name="bzaqdf-4-1" style="display: none;" checked> 
+        
+                <div class="container">
+                    <div class="rows">
+                        <label class="option">请输入管道工作压力的最大波动幅度(MPa):</label><input id="bzaqdf-4-1-1-input">
+                    </div>
+                    <div class="rows">
+                        <label class="option">请输入管道最高工作压力(MPa):</label><input id="bzaqdf-4-1-2-input">
+                    </div>
+                    <div class="rows">
+                        <label class="option">请输入从管道投用后到所进行的风险评估期间，工作压力的波动次数:</label><input id="bzaqdf-4-1-3-input">
+                    </div>
+                </div>
+        
+                <script>
+                    var inputElement1_ = document.getElementById('bzaqdf-4-1-1-input');
+                    var inputElement2_ = document.getElementById('bzaqdf-4-1-2-input');
+                    var inputElement3_ = document.getElementById('bzaqdf-4-1-3-input');
+        
+                    var p_change = parseFloat(inputElement1_.value);
+                    var pmax2 = parseFloat(inputElement2_.value);
+                    var n = parseFloat(inputElement3_.value);
+        
+                    var answer;
+                    var w=p_change/pmax2;
+        
+                    if(w>0.9 && w<=1 && n<1000){answer=1.5;}
+                    else if(w>0.9 && w<=1 && n>=1000 && n<10000){answer=1;}
+                    else if(w>0.9 && w<=1 && n>=10000 && n<100000){answer=0.6;}
+                    else if(w>0.9 && w<=1 && n>=100000 && n<=1000000){answer=0.4;}
+                    else if(w>0.9 && w<=1 && n>1000000){answer=0;}
+                    else if(w>0.75 && w<=0.9 && n<1000){answer=1.6;}
+                    else if(w>0.75 && w<=0.9 && n>=1000 && n<10000){answer=1.2;}
+                    else if(w>0.75 && w<=0.9 && n>=10000 && n<100000){answer=1;}
+                    else if(w>0.75 && w<=0.9 && n>=100000 && n<=1000000){answer=0.6;}
+                    else if(w>0.75 && w<=0.9 && n>1000000){answer=0.4;}
+                    else if(w>0.5 && w<=0.75 && n<1000){answer=1.8;}
+                    else if(w>0.5 && w<=0.75 && n>=1000 && n<10000){answer=1.5;}
+                    else if(w>0.5 && w<=0.75 && n>=10000 && n<100000){answer=1.2;}
+                    else if(w>0.5 && w<=0.75 && n>=100000 && n<=1000000){answer=0.8;}
+                    else if(w>0.5 && w<=0.75 && n>1000000){answer=0.6;}
+                    else if(w>0.25 && w<=0.5 && n<1000){answer=2;}
+                    else if(w>0.25 && w<=0.5 && n>=1000 && n<10000){answer=1.8;}
+                    else if(w>0.25 && w<=0.5 && n>=10000 && n<100000){answer=1.4;}
+                    else if(w>0.25 && w<=0.5 && n>=100000 && n<=1000000){answer=1;}
+                    else if(w>0.25 && w<=0.5 && n>1000000){answer=0.8;}
+                    else if(w>0.1 && w<=0.25 && n<1000){answer=2.2;}
+                    else if(w>0.1 && w<=0.25 && n>=1000 && n<10000){answer=2;}
+                    else if(w>0.1 && w<=0.25 && n>=10000 && n<100000){answer=1.6;}
+                    else if(w>0.1 && w<=0.25 && n>=100000 && n<=1000000){answer=1.2;}
+                    else if(w>0.1 && w<=0.25 && n>1000000){answer=1;}
+                    else if(w>0.05 && w<=0.1 && n<1000){answer=2.6;}
+                    else if(w>0.05 && w<=0.1 && n>=1000 && n<10000){answer=2.2;}
+                    else if(w>0.05 && w<=0.1 && n>=10000 && n<100000){answer=1.8;}
+                    else if(w>0.05 && w<=0.1 && n>=100000 && n<=1000000){answer=1.4;}
+                    else if(w>0.05 && w<=0.1 && n>1000000){answer=1.2;}
+                    else if(w<=0.05 && n<1000){answer=3;}
+                    else if(w<=0.05 && n>=1000 && n<10000){answer=2.5;}
+                    else if(w<=0.05 && n>=10000 && n<100000){answer=2;}
+                    else if(w<=0.05 && n>=100000 && n<=1000000){answer=1.5;}
+                    else if(w<=0.05 && n>1000000){answer=1.4;}
+        
+                    var radioButton_ = document.querySelector('input[type="radio"][name="bzaqdf-4-1"]');
+                    radioButton_.value = answer;
+                </script>
+        
+                <script>
+                    var inputElement1_ = document.getElementById('bzaqdf-4-1-1-input');
+                    var inputElement2_ = document.getElementById('bzaqdf-4-1-2-input');
+                    var inputElement3_ = document.getElementById('bzaqdf-4-1-3-input');
+        
+                    inputElement1_.addEventListener('input', function() {
+                    if (isNaN(inputElement1_.value)) {
+                        inputElement1_.value = '';
+                    }
+                    });
+        
+                    inputElement2_.addEventListener('input', function() {
+                    if (isNaN(inputElement2_.value)) {
+                        inputElement2_.value = '';
+                    }
+                    });
+        
+                    inputElement3_.addEventListener('input', function() {
+                    if (isNaN(inputElement3_.value)) {
+                        inputElement3_.value = '';
+                    }
+                    });
+        
+                </script>
+        
+            </form>
+        
+        </div>
+        
+        
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                
+                <div class="c-footer__body">
+                    
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style">
+                    </div>
+                    
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+                </div>
+            </div>
+    </body>
+
+</html>

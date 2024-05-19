@@ -1,0 +1,622 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	width: 100%;
+	height: 100%;
+	background:url(../images/loginBg.png) no-repeat;
+	background-size:cover;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+/*通过邮箱找回密码*/
+.email-logo{
+	margin:36px 0 0 60px;
+}
+.email-logo img{
+	width: 399.44px;
+}
+
+.firstLoginBox{
+	width:960px;
+	height:640px;
+	margin:80px auto 0;
+	background:rgba(255,255,255,0.92) url(../images/email-cont-bg.png) no-repeat;
+	box-shadow:1px 2px 13px 0px #c1bdbd;
+	padding: 0 60px;
+	position: relative;
+	flex:1;
+	/* margin-bottom: 26px; */
+}
+.existe-icons{
+	width: 18px;
+	height: 18px;
+	display: block;
+	background:url(../images/email-return.png) top center no-repeat;
+	float: left;
+	margin: 4px 11px 0 0;
+}
+.retrieveTitle{
+	padding: 60px 0 24px;
+	border-bottom: 1px solid #dadada;
+	overflow: hidden;
+	position: relative;
+}
+.retrieveTitle h3{
+	font-size:24px;
+	color:#555;
+	font-weight:normal;
+	text-align: center;
+}
+.existe{
+	position: absolute;
+	top:61px;
+	right: 0;
+}
+.existe a{
+	display: block;
+	float:left;
+	font-size: 20px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #888888;
+}
+
+
+.mailWay li label{
+	width:100%;
+}
+.iphoneWay li label{
+	display:block;
+	line-height:38px;
+	text-align: center;
+	font-size: 20px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #222222;
+}
+.iphoneWay li .iphoneInput{
+	width: 400px;
+	height: 56px;
+	display: block;
+	margin:20px auto 0;
+	border:1px solid #dadada;
+	border-radius:3px;
+	line-height:38px;
+	font-size:16px;
+	color:#888;
+	text-indent: 24px;
+	background: #E0E0E0;
+	border-radius: 2px 2px 2px 2px;
+}
+.field{
+	font-size:14px;
+	color:#f00;
+	padding-left:26%;
+	display:block;
+}
+.iphoneButton input{
+	width: 183px;
+	height: 48px;
+	background: #D9473C;
+	box-shadow: 0px 4px 8px 0px rgba(217,71,60,0.24);
+	border-radius: 2px 2px 2px 2px;
+	font-size: 20px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #FFFFFF;
+	border:none;
+	display: block;
+	margin: 100px auto 0;
+	cursor: pointer;
+}
+.promptBox{
+	margin: 48px auto 30px;
+}
+
+.promptBox p{
+	text-align:center;
+	font-size: 16px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #888888;
+}
+
+
+.iphoneBox{
+	width:570px;
+	margin: -1px auto 0;
+}
+.iphoneWay li{
+	margin-top:24px;
+	overflow:hidden;
+}
+
+.iphoneButton{
+	margin:30px auto 0;
+}
+.iphoneButton input.carryButton{
+	background:#d9473c;
+	color:#fff;
+}
+
+
+/*footer*/
+.footerBox{
+	width:100%;
+
+	margin-top: 48px;;
+}
+
+.footer{
+	margin-top: 50px;
+    background-color: rgba(0,0,0,0.5);
+}
+.footer p{
+	font-size: 14px;
+	font-family: Inter-Regular, Inter;
+	font-weight: 400;
+	color: #EFEFEF;
+	line-height: 16px;
+	-webkit-background-clip: text;
+	text-align: center;
+	line-height: 60px;
+	opacity: 0.8;
+}
+.footer p em{
+	padding:0 7px;
+}
+
+/*首次登录信息门户*/
+.flowerly-bg{
+	background:rgba(255,255,255,0.92) url(../images/flowerly-bg.png) no-repeat;
+}
+.flowerlyTitle{
+	border-bottom: none;
+}
+.creatBox{
+	margin:12px 0 0;
+}
+.mailUl{
+	overflow: hidden;
+}
+.mailUl li{
+	width: 318px;
+	height: 72px;
+	float: left;
+	background:url(../images/progress.png) no-repeat;
+}
+.mailUl li b{
+	width: 18px;
+	height: 18px;
+	display: block;
+	font-size: 14px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #555555;
+	border: 1px solid #555;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 20px;
+	float: left;
+	margin: 25px 30px 0 30px;
+}
+
+.mailUl li span{
+	display:block;
+	font-size:24px;
+	color:#555;
+	line-height: 72px;
+}
+.mailUl li.completing{
+	background:url(../images/progress-hover.png) no-repeat;
+}
+.mailUl li.has-complet{
+	background:url(../images/progress-has.png) no-repeat;
+}
+.mailUl li.completing b{
+	border:1px solid #fff;
+	color:#fff;
+}
+.mailUl li.completing span{
+	color: #fff;
+}
+.mailUl li.has-complet b{
+	border:1px solid #D9473C;
+	color:#D9473C;
+}
+.mailUl li.has-complet span{
+	color: #D9473C;
+}
+
+.creatSchool{
+	overflow:hidden;
+	margin-top: 36px;
+}
+
+.creatSchool li h3 em{
+	width: 28px;
+	height: 28px;
+	display: block;
+	background: rgba(217,71,60,0.1);
+	border-radius: 14px 14px 14px 14px;
+	display: block;
+	font-style: normal;
+	font-size: 16px;
+	font-family: Nunito Sans-Regular, Nunito Sans;
+	font-weight: 400;
+	color: #D9473C;
+	text-align: center;
+	line-height: 28px;
+	float:left;
+	margin-right: 12px;
+}
+.creatSchool li h3{
+	font-size:18px;
+	color:#303030;
+	font-weight:normal;
+	line-height: 28px;
+}
+.tipsText{
+	width: 100%;
+	text-indent: 20px;
+	margin: 3px 0 38px 19px;
+	font-size: 14px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #888888;
+}
+.mailAlias{
+	margin:32px 0 0 41px;
+	overflow:hidden;
+}
+.pc-mailAlias{
+	display: block;
+}
+.iphone-mailAlias{
+	display: none;
+}
+.mailAlias input{
+	float:left;
+	line-height:48px;
+	text-indent: 24px;
+	width: 400px;
+	height: 48px;
+	background: #E0E0E0;
+	border-radius: 2px;
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #888888;
+	border: none;
+}
+.mailAlias span{
+	display:block;
+	float:left;
+	line-height:48px;
+	margin-left:15px;
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #555555;
+}
+.mailAlias a{
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #D9473C;
+	width: 127px;
+	height: 48px;
+	border-radius: 44px 44px 44px 44px;
+	opacity: 1;
+	border: 1px solid #D9473C;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 48px;
+	margin-left: 24px;
+}
+.mailButton{
+	width: 183px;
+	height: 48px;
+	background: #D9473C;
+	box-shadow: 0px 4px 8px 0px rgb(217 71 60 / 24%);
+	border-radius: 2px 2px 2px 2px;
+	font-size: 20px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 48px;
+	border: none;
+	display: block;
+	margin: 0 auto 0;
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	margin-left: -91px;
+	cursor: pointer;
+}
+
+
+.completBox{ margin-top:90px;}
+.completIcons img{ display:block; margin:0 auto;}
+.completPart{
+	width: 540px;
+	margin: 30px auto 0;
+	font-size:16px;
+	text-align:center;
+	font-size: 16px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #222222;
+	line-height: 24px;
+}
+.completPart em{
+	color: #D9473C;
+	font-style:normal;
+}
+.completButton input{
+	border:1px solid #d9473c;
+	width:180px;
+	height:46px;
+	border-radius: 36px;
+	line-height:40px;
+	text-align:center;
+	display:block;
+	margin:40px auto 0;
+	letter-spacing:1px;
+	cursor:pointer;
+	font-size: 20px;
+	font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+	font-weight: 400;
+	color: #D9473C;
+}
+
+
+@media screen and (max-width:1000px) {
+	/*找回密码*/
+	body{
+		background: url(../images/iphone-loginBg.svg) no-repeat;
+		background-size: cover;
+		background-attachment:fixed
+	}
+	.email-logo{
+		margin: 0.6rem 0 0 0;
+	}
+	.email-logo img{
+		width: 7rem;
+		margin: 0 auto;
+		display: block;
+	}
+	.firstLoginBox{
+		width: auto;
+		height: auto;
+		margin: 0.7rem 0.2rem;
+		padding: 0 0.5rem 0.6rem;
+		
+	}
+	.retrieveTitle{
+		padding: 0.5rem 0;
+	}
+	.retrieveTitle h3{
+		font-size: 0.5rem;
+	}
+	.completPart{
+		font-size: 0.35rem;
+		width: 100%;
+		line-height: 0.65rem;
+		margin: 0.8rem auto 0;
+	}
+	.completButton input{
+		width: 100%;
+		font-size: 0.4rem;
+		height: auto;
+		padding: 0.25rem 0;
+		margin-top: 0.6rem;
+		border-radius: 12rem;
+		line-height: normal;
+	}
+	.promptBox{
+		margin-top: 0.8rem;
+	}
+	.promptBox p{
+		font-size: 0.3rem;
+	}
+	.completIcons img {
+		/**width: 2.5rem;
+		height: 2.5rem;**/
+	}
+	.completBox{
+		margin-top: 1rem;
+	}
+	.footerBox{
+		display: none;
+	}
+
+	/*找回密码2*/
+	.existe{
+		display: none;
+	}
+	.iphoneWay li{
+		margin-top: 0.9rem;
+	}
+	.iphoneWay li label{
+		font-size: 0.37rem;
+	}
+	.iphoneBox {
+		width: 100%;
+		margin: 0.8rem auto 0;
+	}
+	.iphoneWay li .iphoneInput{
+		width: 100%;
+		height: 1rem;
+		margin: 0.5rem auto 0;
+		font-size: 0.35rem;
+	}
+	.iphoneButton input.carryButton{
+		width: 100%;
+		height: 1rem;
+		font-size: 0.35rem;
+		margin: 2.6rem 0 0;
+	}
+
+	/*首次登录1*/
+	.flowerly-bg{
+		/*height: 11rem;*/
+	}
+	.pc-first-title{
+		display: none;
+	}
+	.iphone-first-title{
+		display: block;
+	}
+	.retrieveTitle h3{
+		margin-top: 0.23rem;
+	}
+	.mailUl li {
+		width: 33%;
+		height: 0.8rem;
+
+		float: left;
+		background: url(../images/iphone-progress.png) no-repeat;
+		display: flex;
+		align-items: center;
+		background-size: 100% 100%;
+	}
+	.mailUl li.completing {
+		width: 33%;
+		height: 0.8rem;
+		float: left;
+		background: url(../images/iphone-progress-hover.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	.mailUl li span{
+		display: none;
+	}
+	.mailUl li b{
+		width: 0.4rem;
+		height: 0.4rem;
+		text-align: center;
+		line-height: 0.4rem;
+		margin: 0 auto;
+		font-size: 0.3rem;
+	}
+	.creatSchool li h3{
+		font-size: 0.32rem;
+		line-height: normal;
+		display: flex;
+		align-items: center;
+	}
+	.creatSchool li h3 em{
+		font-size: 0.32rem;
+		width: 0.4rem;
+		height: 0.4rem;
+		text-align: center;
+		line-height: 0.4rem;
+	}
+	.tipsText{
+		font-size: 0.3rem;
+		text-indent: 0;
+		margin: 0.4rem 0 0 0;
+		line-height: 0.5rem;
+	}
+	.creatBox{
+		margin: 0;
+	}
+	.creatSchool{
+		margin-top: 0.8rem;
+	}
+	.mailAlias{
+		margin: 0.5rem 0 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	.mailAlias span{
+		position: absolute;
+		color: #222;
+		font-size: 0.35rem;
+		right: 0.4rem;
+	}
+	.mailAlias input{
+		width: 100%;
+		height: 1rem;
+		font-size: 0.35rem;
+		text-indent: 0.4rem;
+	}
+	.mailButton{
+		position: static;
+		width: 100%;
+		height: 1rem;
+		margin:3rem 0 0 0;
+		font-size: 0.35rem;
+		line-height: 1rem;
+	}
+	.mailUl li.has-complet {
+		background: url(../images/iphone-progress-has.png) no-repeat;
+		width: 33%;
+		height: 0.8rem;
+		background-size: 100% 100%;
+	}
+	/*首次登录2*/
+	.pc-mailAlias{
+		display: none;
+	}
+	.iphone-mailAlias{
+		display: block;
+	}
+	.iphone-mailAlias input.iphone-yzm-input{
+		width: 70%;
+	}
+	.iphone-mailAlias a.iphone-get-code{
+		width: 25%;
+		float: right;
+		height: 0.95rem;
+		line-height: 0.95rem;
+		font-size: 0.28rem;
+		margin-left: 0;
+	}
+	.mailAlias span.passwordLength{
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width:640px) {
+	.completPart {
+		font-size: 0.4rem;
+		width: 100%;
+		line-height: 0.8rem;
+		margin: 0.8rem auto 0;
+	}
+	.tipsText {
+		margin: 0.4rem 0 0.7rem 0;
+	}
+	.promptBox p {
+		font-size: 0.3rem;
+	}
+	.creatSchool li h3{
+		font-size: 0.38rem;
+	}
+	.creatSchool li h3 em{
+		width: 0.5rem;
+		height: 0.5rem;
+		line-height: 0.5rem;
+	}
+
+}
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}

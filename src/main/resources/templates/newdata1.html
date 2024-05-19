@@ -1,0 +1,980 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="中国石油大学（北京）克拉玛依校区">
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <title>
+            中国石油大学（北京）克拉玛依校区管道评估系统
+        </title>
+        <link rel="stylesheet" href="../static/js/normalize.css">
+        <link href="../static/js/vendors.css" rel="stylesheet">
+        <link href="../static/js/home.css" rel="stylesheet">
+        <link href="../static/js/detail.css" rel="stylesheet">
+
+
+        <style>
+            p{
+              font-size: 350%;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              text-align: center;
+              margin-top: 4vh;
+              
+            }
+      
+            .container {
+                display: flex;
+                background-color:rgb(198, 255, 255);
+                box-shadow: 10px 5px 5px lightgrey; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: -30%;
+                margin-right: 30%;
+                width:140vh;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                padding: 50px 0;
+                border-radius: 10px;
+                
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-bottom: 3vh;
+                margin-top: 3vh;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 3vh;
+            }
+
+            .button {
+                background-color: rgb(198, 255, 255); 
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(198, 255, 255); 
+                color: black; 
+                border: 2px solid #008997;
+                height: 6%;
+                width: 80%;
+            }
+
+            .button:hover {
+                background-color: #008997;
+                color: white;
+            }
+
+            .button:active {
+                background-color: #0367a6;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '»';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .text {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+    
+            .rows{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%;
+                margin-left: 15%;
+                margin-right: 15%;
+                align-items: center;
+                gap: 1vh;
+                
+            }
+            .question {
+                position: relative;
+                font-weight: bold;
+                font-size: 140%;
+                margin-left: 15%;
+                word-wrap: break-word; /* 允许在单词内部换行 */
+                overflow-wrap: break-word; /* 与 word-wrap 作用相同，是较新的属性名 */
+            }
+            .option{
+                font-size-adjust: 1;
+                font-weight: bold;
+                font-size: 2vh;
+                flex-grow: 1;
+                
+            }
+            .back_button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+      
+          </style>
+    </head>
+    <script language="javascript">
+        function f1() { 
+            window.history.go( - 1);
+        }
+        function toggleDiv(a) {
+            var div = document.getElementById(a);
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function openPage(x) {
+              window.open(x, "_self");
+        }
+
+        function opendivs(x) {
+          var div = document.getElementById(x);
+          if (div.style.display === "none") {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+
+    </script>
+    
+    <body>
+        <!--官网头部组件-->
+        <!--二级页面头部组件-->
+        <div class="height-165 c-header_width c-header_relative">
+            <div class="c-header_bg height-165">
+            </div>
+            <div>
+                <!--电脑版顶部链接-->
+                <img class="c-header_width c-header_div_header_line" src="../static/images/head-line.png">
+                <div class="c-header_input ">
+                    <div class="c-header_icon_logo">
+                        <a>
+                            <img class="c-header_icon_logo_img" src="../static/images/logo_gw.png">
+                        </a>
+                        <a style="color:white;font-size: 40px;">
+                            管道评估系统
+                        </a>
+                    </div>
+                    <!--电脑版顶部链接-->
+                </div>
+            </div>
+            <div class="c-header_title">
+                <a href="main.html">
+                    <div class="research c-header_lib c-header_font">
+                        首页
+                    </div>
+                </a>
+                <div class="research c-header_lib c-header_font">
+                    数据管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data01.html">
+                                管道数据输入
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="data02.html">
+                                风险评估
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    结果查询
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result01.html">
+                                查询
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="result02.html">
+                                输出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    风险管理
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk01.html">
+                                风险管段
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="risk02.html">
+                                风险控制措施
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="research c-header_lib c-header_font">
+                    个人中心
+                    <ul class="researchList c-header_lib_ul">
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="person01.html">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="c-header_lib_ul_li">
+                            <a class="c-header_font_a_second" href="login.html">
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/jquery-1.9.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".c-header_title .c-header_lib").each(function() {
+                    var tag = $(this);
+                    $this = $(this);
+                    console.log($this);
+                    console.log($this.children());
+                    if ($this.children()[0] && $this.children()[0].href == String(window.location)) {
+
+                        tag.addClass('c-header_lib--active');
+                    }
+                    $this.children('.c-header_lib_ul').children('li').each(function() {
+                        var href = $(this).children('a').attr('href');
+                        if (href && href != 'http://' && String(window.location).indexOf(href) >= 0) {
+                            console.log($(this).children('a').attr('href'));
+                            console.log($(this).children('a')[0].href);
+                            console.log($(this).children('a')[0]);
+                            tag.addClass('c-header_lib--active');
+                        }
+                    })
+
+                });
+                $(".research").hover(function() {
+                    var count = $(this).children('ul').children('li').length;
+                    $(this).children('.researchList').css('height', 42 * count);
+                },
+                function() {
+                    $(this).children('.researchList').css('height', '0px');
+                });
+            });
+        </script>
+        <div class="c-main c-main--second">
+            <div class="c-main--center">
+            </div>
+        </div>
+        <div class="container2">
+            <button class="button" onclick="opendivs(1)">一、地面活动水平</button>
+            <form id=1 style="display: none;">
+                <div class="container">
+                    <label class="question">1.1.地区等级</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-1" value=0> 
+                        <label class="option">四级地区</label>
+                        <input type="radio" name="dsfph-1-1" value=2>
+                        <label class="option">三级地区</label>
+                        <input type="radio" name="dsfph-1-1" value=4>
+                        <label class="option">二级地区</label>
+                        <input type="radio" name="dsfph-1-1" value=6>
+                        <label class="option">一级地区</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.2.建设活动频繁程度</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-2" value=0> 
+                        <label class="option">管道区段位于矿藏开发及重工业生产地区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-2" value=1> 
+                        <label class="option">管道区段位于在建的经济技术开发区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-2" value=1.5> 
+                        <label class="option">管道区段位于经常对周围地下设施进行维护的地区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-2" value=2> 
+                        <label class="option">管道区段位于附近有清理水沟，修围墙等维护活动的地区</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-2" value=3> 
+                        <label class="option">管道区段位于没有建设活动的地区</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.3.对建设活动施工单位的技术交底</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-3" value=0> 
+                        <label class="option">未交底</label>
+                        <input type="radio" name="dsfph-1-3" value=1>
+                        <label class="option">已交底</label>
+                        <input type="radio" name="dsfph-1-3" value=3>
+                        <label class="option">现场交底</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.4.交通繁忙程度</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-4" value=0> 
+                        <label class="option">管道区段附近有铁路、公路交通主干线</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-4" value=0.5> 
+                        <label class="option">管道区段附近有公路交通干线</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-4" value=2> 
+                        <label class="option">管道区段附近几乎没有车辆通行</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.5.农业生产活动</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-5" value=0> 
+                        <label class="option">在管道区段上方进行大型机械化耕种，打苕沟，犁地等较深挖掘</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-5" value=1> 
+                        <label class="option">在管道区段上有少量挖掘深度小于500 mm的浅土层农作物</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-5" value=2> 
+                        <label class="option">在管道区段上无农业生产活动</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.6.地质勘探活动</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-6" value=1> 
+                        <label class="option">管道区段附近有公路交通线、乡村公路、机耕道</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-6" value=0> 
+                        <label class="option">管道区段附近有地质勘探活动</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-6" value=1> 
+                        <label class="option">管道区段附近无地质勘探活动</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">1.7.野生动物活动</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-7" value=0> 
+                        <label class="option">管道区段附近有老鼠打洞等野生动物活动</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-1-7" value=1> 
+                        <label class="option">管道区段附近无老鼠打洞等野生动物活动</label>
+                    </div>
+                </div>
+            </form>
+        
+            <button class="button" onclick="opendivs(2)">二、埋深</button>
+            <form id=2 style="display: none";>
+                <div class="container">
+                    <label class="question">2.1.非水下管道埋深情况</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-1" value=0> 
+                        <label class="option">是跨越段或裸露段</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-1" value="none"> 
+                        <label class="option">是埋地段</label>
+                    </div>
+
+                </div>
+
+                <div id="dsfph-2-1-2" style="display: none;" class="container">
+                    <div class="rows">
+                        <input type="checkbox" name="dsfph-2-1-2-1" value=7.5 style="border-radius: 0%"> 
+                        <label class="option" style="margin-left: -13vh;">管道套管</label>
+    
+                        <input type="checkbox" name="dsfph-2-1-2-2" value=7.5 style="border-radius: 0%"> 
+                        <label class="option" style="margin-left: -13vh;">加强水泥盖板</label>
+    
+                        <input type="checkbox" name="dsfph-2-1-2-3" value=1.875 style="border-radius: 0%"> 
+                        <label class="option" style="margin-left: -13vh;">警告标志带</label>
+                    </div>
+                    <div class="rows">
+                        <input type="checkbox" name="dsfph-2-1-2-4" value=5.75 style="border-radius: 0%"> 
+                        <label class="option" style="margin-left: -26vh;">网栏围住</label>
+    
+                        <input type="checkbox" name="dsfph-2-1-2-5" style="border-radius: 0%"> 
+                        <label class="option" id="dsfph-2-1-2-5-label" style="margin-left: -26vh;">请输入水泥保护层厚度(mm):</label>
+                    </div>
+                </div>
+    
+                <style>
+                    #dsfph-2-1-2-5-input {
+                        margin-left: -25vh;
+                        width: 10vh;
+                        height: 3vh;
+                    }
+                </style>
+    
+                <script>
+                    var checkbox = document.querySelector('input[name="dsfph-2-1-2-5"]');
+                    var label = document.getElementById('dsfph-2-1-2-5-label');
+                
+                    var input = document.createElement('input');
+                    input.type = 'number';
+                    input.id = 'dsfph-2-1-2-5-input';
+                
+                    input.addEventListener('input', function() {
+                        var x = parseFloat(input.value);
+                        var d = 0;
+                
+                        if (x >= 50) {
+                            d += Math.floor(x / 50) * 200;
+                        }
+                        if (x >= 100) {
+                            d += Math.floor(x / 100) * 300;
+                        }
+                
+                        checkbox.value = Math.min(d / 80, 20);
+                    });
+                
+                    label.insertAdjacentElement('afterend', input);
+                </script>
+                <script>
+                    var dsfph_ms_1_1Radios = document.getElementsByName("dsfph-2-1");
+                    var dsfph_ms_1_2Radios = document.querySelectorAll("#dsfph-2-1-2 input[type='checkbox']");
+        
+                    for (var i = 0; i < dsfph_ms_1_1Radios.length; i++) {
+                        dsfph_ms_1_1Radios[i].addEventListener("click", function() {
+                            if (this.value === "none") {
+                                document.getElementById("dsfph-2-1-2").style.display = "block";
+                            } else {
+                                document.getElementById("dsfph-2-1-2").style.display = "none";
+                                for (var j = 0; j < dsfph_ms_1_2Radios.length; j++) {
+                                    dsfph_ms_1_2Radios[j].checked = false;
+                                }
+                            }
+                        });
+                    }
+                </script>
+        
+                <div class="container">
+                    <label class="question">2.2.可通航河道河底土壤表面(河床表面)与航船底面距离或未通航河道的水深区间</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-2" value=0> 
+                        <label class="option">[0 m,0.5 m)</label>
+                        <input type="radio" name="dsfph-2-2" value=2>
+                        <label class="option">[0.5 m,1.0 m)</label>
+                        <input type="radio" name="dsfph-2-2" value=3>
+                        <label class="option">[1.0 m,1.5 m)</label>
+                        <input type="radio" name="dsfph-2-2" value=4>
+                        <label class="option">[1.5 m,2.0 m)</label>
+                        <input type="radio" name="dsfph-2-2" value=5>
+                        <label class="option">[2.0 m,+∞)</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.3.水下穿越管道在河底的土壤埋深</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-3" value=0> 
+                        <label class="option">[0 m,0.5 m)</label>
+                        <input type="radio" name="dsfph-2-3" value=3>
+                        <label class="option">[0.5 m,1.0 m)</label>
+                        <input type="radio" name="dsfph-2-3" value=5>
+                        <label class="option">[1.0 m,1.5 m)</label>
+                        <input type="radio" name="dsfph-2-3" value=7>
+                        <label class="option">[1.5 m,2.0 m)</label>
+                        <input type="radio" name="dsfph-2-3" value=10>
+                        <label class="option">[2.0 m,+∞)</label>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <label class="question">2.4.水下穿越管道的保护措施</label>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-4" value=0> 
+                        <label class="option">无保护措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-4" value=3> 
+                        <label class="option">采用石笼稳管、加设固定墩等稳管措施</label>
+                    </div>
+                    <div class="rows">
+                        <input type="radio" name="dsfph-2-4" value=5> 
+                        <label class="option">采用30 mm以上水泥保护层或其他能达到同样加固效果的措施</label>
+                    </div>
+                </div>
+            </form>
+            <button onclick="opendivs(3)" class="button">三、地面装置及其保护措施</button>
+            <div id=3 style="display: none";>
+                <form>
+        
+                    <div class="container">
+                        <label class="question">3.1.地面装置与公路的距离</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-1" value=0> 
+                            <label class="option">不大于15 m</label>
+                            <input type="radio" name="dsfph-3-1" value=4>
+                            <label class="option">大于15 m</label>
+                            <input type="radio" name="dsfph-3-1" value=4>
+                            <label class="option">无地面装置</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">3.2.地面装置的围栏</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-2" value=0> 
+                            <label class="option">地面装置没有保护围栏或者粗壮的树将装置与路隔离</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-2" value=2> 
+                            <label class="option">地面装置设有保护围栏或者粗壮的树将装置与路隔离</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-2" value=2> 
+                            <label class="option">无地面装置</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">3.3.地面装置的沟渠</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-3" value=0> 
+                            <label class="option">地面装置与道路之间无不低于1.2 m深的沟渠</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-3" value=2> 
+                            <label class="option">地面装置与道路之间有不低于1.2 m深的沟渠</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-3" value=2> 
+                            <label class="option">无地面装置</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">3.4.地面装置的警示标志符号</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-3-3" value=0> 
+                            <label class="option">无警示标志符号</label>
+                            <input type="radio" name="dsfph-3-3" value=1>
+                            <label class="option">有警示标志符号</label>
+                            <input type="radio" name="dsfph-3-3" value=1>
+                            <label class="option">无地面装置</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+            <button onclick="opendivs(4)" class="button">四、占压</button>
+            <div id=4 style="display: none";>
+                <form> 
+                    <div class="container">
+                        <label class="question">4.1.管道区段上占压现象</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-4-1" value=0> 
+                            <label class="option">严重(5处以上)</label>
+                            <input type="radio" name="dsfph-4-1" value=3>
+                            <label class="option">存在占压现象(1~4处)</label>
+                            <input type="radio" name="dsfph-4-1" value=6>
+                            <label class="option">无占压现象</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button onclick="opendivs(5)" class="button">五、管道施工带条件</button>
+            <div id=5 style="display: none";>
+                <form>
+                    <div class="container">
+                        <label class="question">5.1.管道施工带条件</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-5-1" value=0> 
+                            <label class="option">管道区段处于茂密的树林中或大块农田中，无法准确确认其位置，无任何标志</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-5-1" value=2> 
+                            <label class="option">有部分标志，但确定管道区段位置比较困难</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-5-1" value=4> 
+                            <label class="option">管道区段走向清晰可见</label>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+            <button onclick="opendivs(6)" class="button">六、巡线</button>
+            <div id=6 style="display: none";>
+                <form>  
+        
+                    <div class="container">
+                        <label class="question">6.1.巡线频率</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-1" value=0> 
+                            <label class="option">从来不巡线</label>
+                            <input type="radio" name="dsfph-6-1" value=1>
+                            <label class="option">(0，每月1次]</label>
+                            <input type="radio" name="dsfph-6-1" value=3>
+                            <label class="option">(每月1次，每月2次]</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-1" value=4>
+                            <label class="option">(每月2次，每周1次]</label>
+                            <input type="radio" name="dsfph-6-1" value=5>
+                            <label class="option">(每周1次，每两日1次]</label>
+                            <input type="radio" name="dsfph-6-1" value=6>
+                            <label class="option">(每两日1次，每日1次]</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-1" value=8>
+                            <label class="option">聘有随时报告员</label>                  
+                        </div>
+                    </div>
+            
+            
+                    <div class="container">
+                        <label class="question">6.2.巡线方式</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-2" value=0> 
+                            <label class="option">只巡检乘车方便的管段</label>
+        
+                            <input type="radio" name="dsfph-6-2" value=1> 
+                            <label class="option">只巡检建设、挖掘频繁的管段</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-2" value=2> 
+                            <label class="option">逐一村社巡线</label>
+        
+                            <input type="radio" name="dsfph-6-2" value=4> 
+                            <label class="option">沿管道区段逐步巡线</label>
+                        </div>
+                    </div>            
+        
+                    <div class="container">
+                        <label class="question">6.3.巡线人员的能力</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-3" value=0> 
+                            <label class="option">不能胜任巡线工作</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-3" value=2> 
+                            <label class="option">基本胜任巡线工作</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-3" value=3> 
+                            <label class="option">能胜任巡线工作</label>
+                        </div>
+                    </div>  
+        
+                    <div class="container">
+                        <label class="question">6.4.线民密度</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-4" value=0> 
+                            <label class="option">没有人随时向管道操作员报告管道沿线的破坏行为</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-4" value=1> 
+                            <label class="option">随时报告管道沿线情况的线民密度∈(0，1人／10 km]</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-4" value=2> 
+                            <label class="option">随时报告管道沿线情况的线民密度∈(1人／10 km，1人／5 km]</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-4" value=3> 
+                            <label class="option">随时报告管道沿线情况的线民密度∈(1人／5 km，1人／1 km]</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-6-4" value=4> 
+                            <label class="option">管道巡线工能与随时报告管道沿线情况的线民有固定、可靠的联系</label>
+                        </div>
+                    </div> 
+                </form>
+            </div>
+            <button onclick="opendivs(7)" class="button">七、对公众进行管道安全教育</button>
+            <div id=7 style="display: none";>
+                <form>
+                    <div class="container">
+                        <label class="question">7.1.是否与当地建筑商及其分包商会唔</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-1" value=0> 
+                            <label class="option">未进行会晤</label>
+        
+                            <input type="radio" name="dsfph-7-1" value=2> 
+                            <label class="option">进行了会晤</label>
+                        </div>
+                    </div>              
+                    
+                    <div class="container">
+                        <label class="question">7.2.是否向当地可能的承包商、挖掘者发放宣传资料</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-2" value=0> 
+                            <label class="option">未发放资料</label>
+        
+                            <input type="radio" name="dsfph-7-2" value=4> 
+                            <label class="option">发放了资料</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.3.是否每年与当地干部举行联席会</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-3" value=0> 
+                            <label class="option">未进行会议</label>
+        
+                            <input type="radio" name="dsfph-7-3" value=2> 
+                            <label class="option">进行了会议</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.4.是否对社会团体进行定期教育</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-4" value=0> 
+                            <label class="option">未进行教育</label>
+        
+                            <input type="radio" name="dsfph-7-4" value=2> 
+                            <label class="option">进行了教育</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.5.是否与村镇签订联防协议</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-5" value=0> 
+                            <label class="option">未签订协议</label>
+        
+                            <input type="radio" name="dsfph-7-5" value=1> 
+                            <label class="option">签订了协议</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.6.是否向管道经过地区居民发放宣传资料</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-6" value=0> 
+                            <label class="option">未发放资料</label>
+        
+                            <input type="radio" name="dsfph-7-6" value=2> 
+                            <label class="option">发放了资料</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.7.是否对村民进行挨家挨户宣传教育</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-7" value=0> 
+                            <label class="option">未进行教育</label>
+        
+                            <input type="radio" name="dsfph-7-7" value=2> 
+                            <label class="option">进行了教育</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">7.8.是否张贴或书写宣传标语</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-7-8" value=0> 
+                            <label class="option">未进行宣传</label>
+        
+                            <input type="radio" name="dsfph-7-8" value=1> 
+                            <label class="option">进行了宣传</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button onclick="opendivs(8)" class="button">八、公众对管道的保护意识</button>
+            <div id=8 style="display: none";>
+                <form>
+                    <div class="container">
+                        <label class="question">8.1.村镇文明建设</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-1" value=0> 
+                            <label class="option">管道区段沿线是从未获得文明称号的村镇</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-1" value=0.5> 
+                            <label class="option">管道区段沿线是曾获得过1~2次文明称号的村镇</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-1" value=1> 
+                            <label class="option">管道区段沿线是连续3次以上的文明村镇</label>
+                        </div>
+                    </div>              
+        
+                    <div class="container">
+                        <label class="question">8.2.村镇经济发达程度</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-2" value=0> 
+                            <label class="option">管道区段沿线村镇的人均年收入<1500元人民币</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-2" value=1> 
+                            <label class="option">管道区段沿线村镇的人均年收入∈[1500,3000)元人民币</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-2" value=1.5> 
+                            <label class="option">管道区段沿线村镇的人均年收入∈[3000,5000]元人民币</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-2" value=2> 
+                            <label class="option">管道区段沿线村镇的人均年收入>5000元人民币</label>
+                        </div>
+                    </div> 
+        
+                    <div class="container">
+                        <label class="question">8.3.村镇社会治安状况</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-3" value=0> 
+                            <label class="option">管道区段沿线村镇每年都有治安和刑事案件发生</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-3" value=1> 
+                            <label class="option">管道区段沿线村镇近两年有1～2次治安和刑事案件发生</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-3" value=1.5> 
+                            <label class="option">管道区段沿线村镇近五年有1～2次治安和刑事案件发生</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-3" value=2> 
+                            <label class="option">管道区段沿线村镇从未发生过治安和刑事案件</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">8.4.居民文化素质</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-4" value=0> 
+                            <label class="option">管道区段沿线村镇居民大多数为文盲或小学文化水平(占总人口70％以上)</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-4" value=0.5> 
+                            <label class="option">管道区段沿线村镇居民基本为初中文化程度(占总人口70％以上)</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-4" value=1> 
+                            <label class="option">管道区段沿线村镇居民有一些高中文化程度居民(至少占总人口10％)</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-4" value=1.5> 
+                            <label class="option">管道区段沿线村镇居民有一些大学生(不到总人口10％)</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-4" value=2> 
+                            <label class="option">管道区段沿线村镇居民大学生比例不小于l0％</label>
+                        </div>
+                    </div>
+        
+                    <div class="container">
+                        <label class="question">8.5.当地政府的配合情况</label>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-5" value=0> 
+                            <label class="option">管道区段沿线当地政府对破坏管道行为不积极制止和惩罚</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-5" value=0.5> 
+                            <label class="option">管道区段沿线当地政府的配合被动，不得力</label>
+                        </div>
+                        <div class="rows">
+                            <input type="radio" name="dsfph-8-5" value=1> 
+                            <label class="option">管道区段沿线当地政府积极配合管道公司的工作</label>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+        
+        </div>
+            <!--首页底部footer模块-->
+            <div class="c-footer__bg  c-footer">
+                
+                <div class="c-footer__body">
+                    
+                    <div class="c-footer__main-border">
+                        <img class="c-footer__main-border-style">
+                    </div>
+                    
+                    <!--<script src="${prefix("js/jquery-1.7.2.min.js")}"></script>
+                    <script>
+                    $(document).ready(function(){            
+                    $(".no-link").addClass("c-footer__bg-no-link-a"); 
+                    $("#no-link").eq(2).addClass("c-footer__bg-no-link-a"); 
+                    });
+                    </script>-->
+                    <script type="text/javascript" src="../static/js/vendors.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detail.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/iscroll.js">
+                    </script>
+                    <script type="text/javascript" src="../static/js/detailScroll.js">
+                    </script>
+                    <script src="../static/js/stat.js" type="text/javascript">
+                    </script>
+                    <script>
+                        if (window._zcms_stat) _zcms_stat("SiteID=125&CatalogInnerCode=001304000001&Type=Article&LeafID=485049&Dest=https://www.cupk.edu.cn/zcms/stat/dealer");
+                    </script>
+                </div>
+            </div>
+    </body>
+
+</html>

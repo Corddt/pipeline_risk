@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+body,form,textarea,select,option,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dt,dd,menu,blockquote,fieldset,legend,button,input,hr,pre{margin: 0;padding: 0; font-family:"microsoft yahei"}
+body{font-family:Arial,Helvetica,sans-serif;font-size:12px;}
+ul,ol,img{border:0px; margin:0; padding:0;}
+li{list-style-type:none;}
+input,select,textarea{vertical-align:middle;outline:none;}
+b{ font-weight:normal;}
+
+::-webkit-input-placeholder {
+  color: #555;
+}
+:-moz-placeholder {/* Firefox 18- */
+  color: #555;
+}
+::-moz-placeholder{/* Firefox 19+ */
+ color: #555;
+}
+:-ms-input-placeholder {
+  color: #555;
+}
+
+.clear{clear:both;font-size:0;height:0;line-height:0;}
+.clearfix{overflow:hidden;zoom:1;}
+input:focus{outline:none}
+table{ border-collapse:collapse;}
+h1,h2,h3,h4{ font-weight:normal;}
+a{ text-decoration:none;}
+
+
+
+
+

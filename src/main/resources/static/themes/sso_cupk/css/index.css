@@ -1,0 +1,494 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body,form,textarea,select,option,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dt,dd,menu,blockquote,fieldset,legend,button,input,hr,pre{margin: 0;padding: 0;}
+body{font-family:Arial,Helvetica,sans-serif;font-size:12px;}
+ul,ol,img{border:0px; margin:0; padding:0;}
+li{list-style-type:none;}
+input,select,textarea{vertical-align:middle;outline:none;}
+
+::-webkit-input-placeholder {
+	color: #999;
+}
+:-moz-placeholder {/* Firefox 18- */
+	color: #999;
+}
+::-moz-placeholder{/* Firefox 19+ */
+	color: #999;
+}
+:-ms-input-placeholder {
+	color: #999;
+}
+
+.clear{clear:both;font-size:0;height:0;line-height:0;}
+.clearfix{overflow:hidden;zoom:1;}
+.leftF{float:left; margin-top:20px;}
+.rightF{float:right; margin-top:20px;}
+.f-wh{ width:626px; float:left;}
+input:focus{outline:none}
+table{ border-collapse:collapse;}
+h1,h2,h3,h4{ font-weight:normal;}
+
+
+body{ 
+  width:100%; 
+  height:100%;
+  font-family: "microsoft yahei"; 
+  background:url(../images/loginBg.jpg) no-repeat;background-size:cover;
+  background-attachment: fixed;
+  }
+
+.logo{ width:1200px; margin:24px auto 0;}
+.logo img{ display:block;}
+
+
+/*登录框---账号登录*/
+.loginCont{
+	 /* width:480px;
+	margin:80px auto 0;*/
+	flex: 1;
+    margin: 0.2rem auto 0.1rem;
+}
+.account-table .account-toggle{
+	display: none;
+	height: 435px;
+}
+/*
+.account-table .account-toggle:first-child{
+	min-height: 435px;
+}
+
+.account-table .account-toggle:nth-child(2){
+	min-height: 375px;
+}
+
+.account-table .account-toggle:last-child{
+	min-height: 465px;
+}
+*/
+
+.loginTable{
+	width:400px;
+	/*height: 640px;*/
+	height: auto;
+	padding:0 40px 0;
+	background: rgba(255,255,255,0.92);
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.25);
+	border-radius: 0px 0px 0px 0px;
+	opacity: 1;
+	filter: blur(undefinedpx);
+	position: relative;
+}
+.loginTable h1{
+	font-size: 32px;
+	font-family: -Regular, ;
+	font-weight: 400;
+	color: #222222;
+	line-height: 38px;
+	letter-spacing: 7px;
+	-webkit-background-clip: text;
+	text-align: center;
+	padding-top:20px;
+}
+.loginTable h2{
+	font-size: 18px;
+	font-family: PingFang SC-Medium, PingFang SC;
+	font-weight: 500;
+	color: #D9473C;
+	line-height: 16px;
+	-webkit-background-clip: text;
+	text-align: center;
+	padding-top:18px;
+}
+
+.loginToggle{
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-top:30px;
+	padding-bottom:16px;
+}
+.loginToggle a{
+	font-size: 20px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #888888;
+	line-height: 23px;
+	-webkit-background-clip: text;
+	text-decoration: none;
+	width:88px;
+	text-align: center;
+}
+.loginToggle a b{
+	width:88px;
+	display: none;
+	position: absolute;
+	opacity: 1;
+	border: 2px solid #D9473C;
+	bottom:0px;
+}
+.loginToggle a.login-select{
+	color:#000;
+}
+.loginToggle a.login-select b{
+	display: block;
+}
+.loginTable .account{
+	width:100%;
+	margin-top:4px;
+}
+.account td{
+	padding-top:32px;
+}
+.userpass{
+	height: 56px;
+	background: #E0E0E0;
+	border-radius: 2px 2px 2px 2px;
+	opacity: 1;
+	text-indent:24px;
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #888888;
+	line-height: 56px;
+	border: none;
+}
+.userName{
+	width:100%;
+}
+.password{
+	width:100%;
+}
+.textYzm{
+	width:65%;
+	float:left;
+	font-family:"microsoft yahei";
+	text-indent: 24px;
+}
+.yzmImg{
+	float:right;
+	cursor:pointer;
+	width: 130px;
+	height: 52px;
+}
+.userButton{
+	width: 400px;
+	/* height: 56px; */
+	line-height: 57px;
+	display: block;
+	color: #fff;
+	border: none;
+	font-size: 24px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	background: #D9473C;
+	box-shadow: 0px 4px 8px 0px #ef47474f;
+	/* position: absolute; */
+	/* bottom: 78px; */
+	/* margin-bottom: 50px; */
+	margin: -10px 0px 50px 0px;
+
+}
+        .userButton:hover {
+        background-color:  rgb(233, 0, 0);
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            /*background:linear-gradient(darkblue,blue);*/
+        }
+        .userButton:active {
+  			box-shadow: 0 5px #666;
+  			transform: translateY(4px);
+}
+.loginTable td.passError{
+	padding-top:20px;
+	border-bottom:none;
+}
+
+.loginTable td.autologin{ *padding-top:15px;}
+.passError span{ font-size:14px; color:#f00; display:block; padding-left:0; }
+.account td.remember{
+	padding-top:22px;
+}
+.remember a{
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #888888;
+	text-decoration: none;
+	position: absolute;
+	bottom: 32px;
+	width: 400px;
+	cursor: pointer;
+
+}
+
+.footer{
+	width:100%;
+	margin-top:50px;
+	background-color: rgba(0,0,0,0.5);
+	height:60px;
+}
+.footer p{
+	font-size:14px;
+	color:#fff;
+	opacity:0.8;
+	text-align:center;
+	line-height:60px;
+}
+
+
+/*短信验证*/
+.getCode{
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #D9473C;
+	width: 120px;
+	height: 54px;
+	border-radius: 2px 2px 2px 2px;
+	opacity: 1;
+	border: 1px solid #D9473C;
+	display: block;
+	float: right;
+	text-decoration: none;
+	line-height: 54px;
+	text-align: center;
+	cursor: pointer;
+}
+.iphoneCodeSend{
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #D9473C;
+	width: 120px;
+	height: 54px;
+	border-radius: 2px 2px 2px 2px;
+	opacity: 1;
+	border: 1px solid #D9473C;
+	display: block;
+	float: right;
+	text-decoration: none;
+	line-height: 54px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*企业微信*/
+.account-code{
+	margin-top:10px;
+	text-align: center;
+}
+.codeImg{
+	width:180px;
+	height: 180px;
+	display: block;
+	margin: 0 auto;
+}
+.account-code span{
+	font-size: 16px;
+	font-family: PingFang SC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #555555;
+	text-align: center;
+	display: block;
+	margin-top: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+	body{
+		width:100%;
+		height:100%;
+		font-family: "microsoft yahei";
+		background:url(../images/loginBg.png) no-repeat;
+		background-size:100% 100%;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.logoCont{
+		min-width:100%;
+	}
+	.logo{
+		width:8rem;
+		margin:24px auto 0;
+	}
+	.logo img{
+		width:100%;
+	}
+	.loginCont {
+		width:100%;
+		margin: 1rem auto 0;
+	}
+	.loginTable{
+		width:85%;
+		height: 10.15rem;
+		margin:0 auto;
+		padding:0 0.4rem 0.5rem;
+		background: rgba(255,255,255,0.92);
+
+	}
+	.loginTable h1{
+		font-size:0.6rem;
+		padding-top:0.1rem;
+	}
+	.loginTable h2{
+		font-size:0.32rem;
+		padding-top:0.42rem;
+	}
+	.loginToggle{
+		margin-top:0.9rem;
+		padding-bottom: 0.45rem;
+	}
+	.loginToggle a{
+		font-size:0.4rem;
+		width:auto;
+	}
+	.loginToggle a b{
+		width:1.55rem;
+	}
+	.userpass{
+		height: 0.9rem;
+		font-size: 0.3rem;
+	}
+	.yzmImg{
+		width: 2rem;
+		height: 0.9rem;
+	}
+	.textYzm{
+		width:73%;
+	}
+	.passError span {
+		font-size: 0.25rem;
+	}
+	.userButton{
+		height: 0.9rem;
+		background-size: 100% 100%;
+		font-size: 0.4rem;
+		line-height: 0.6rem;
+		width: 8.5rem;
+	}
+	.remember a{
+		font-size:0.25rem;
+		width: 8.5rem;
+	}
+	.account-code {
+		margin-top: 0.25rem;
+	}
+	.getCode{
+		height: 0.87rem;
+		line-height: 0.87rem;
+		font-size: 0.3rem;
+		width: 2rem;
+	}
+	 .iphoneCodeSend{
+		height: 0.87rem;
+		line-height: 0.87rem;
+		font-size: 0.3rem;
+		width: 2rem;
+	}
+	.codeImg{
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+	.account-code span{
+		font-size: 0.32rem;
+	}
+	.footer{
+		width: auto;
+		/*margin:1rem 0.3rem;*/
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+	}
+	.footer p{
+		font-size: 0.3rem;
+		height: 3rem;
+		line-height: 0.7rem;
+	}
+
+
+
+}
+
+@media screen and (max-width:640px) {
+	.account td{
+		padding-top: 0.5rem;
+	}
+
+	.userpass {
+		height: 1.1rem;
+		line-height: 1.1rem;
+		text-indent: 0.4rem;
+	}
+	.yzmImg{
+		height:1.1rem;
+	}
+	.loginTable{
+		height: 12rem;
+	}
+	.remember a{
+		bottom: 0.4rem;
+	}
+	.getCode {
+		height: 1.045rem;
+		line-height: 1.045rem;
+	}
+	 .iphoneCodeSend{
+	    height: 1.045rem;
+		line-height: 1.045rem;
+	}
+}
+
+@media screen and (max-width:420px) {
+	.loginTable{
+		height: 13rem;
+	}
+	.remember a {
+		/*bottom: 1.2rem;*/
+	}
+	.codeImg {
+		width: 4.2rem;
+		height: 4.2rem;
+	}
+	.userButton{
+		bottom: 1.5rem;
+	}
+}
+@media screen and (max-width:280px) {
+	.loginTable{
+		height: 15.9rem;
+	}
+	.userButton{
+		bottom: 1.7rem;
+	}
+	.remember a {
+		bottom: 0.6rem;
+	}
+	.textYzm{
+		width: 66%;
+	}
+	.getCode{
+		width: 28%;
+	}
+    .iphoneCodeSend{
+		width: 28%;
+	}
+}
+.wrap{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto
+}
+
+@media screen and (max-width: 730px) {
+	.remember a{
+		bottom: 5px;
+	}
+	
+}
