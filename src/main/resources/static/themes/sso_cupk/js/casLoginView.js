@@ -150,9 +150,9 @@ $(function() {
         var userLoginWay = $("#loginType").val();
         var result = J_check_userputinfo(userLoginWay);
         if (result) {
-            window.location.href='main.html';
+            // window.location.href='main.html';
             //encrypt()
-            //$("#fm1").submit();
+            $("#fm1").submit();
         }
     });
 
